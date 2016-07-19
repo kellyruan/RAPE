@@ -2,7 +2,36 @@
 <html>
     <head>
         <style>
-            
+        body{
+            border: 10px double black;
+            padding:10px;
+        }
+        ul {
+            list-style-type: none;
+            margin-right: 20px;
+            width: 200px;
+            background-color: #f1f1f1;
+            height: 90%;
+            position: fixed;
+            border: 3px groove #555;
+            text-align: center;
+            right:0;
+        }
+        li a {
+            display: block;
+            color: #000;
+            padding: 8px 8px;
+            text-decoration: none;
+            border-bottom: 2px solid #555;
+        }
+        li a:hover {
+            background-color: #555;
+            color: white;
+        }
+        .active {
+            background-color: #4CAF50;
+            color: white;
+    }
         </style>
         <script>
             
@@ -10,6 +39,11 @@
         <title>RAPE: Raising Awareness of People's Experience </title>
     </head>
     <body>
-        
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
     </body>
 </html>
