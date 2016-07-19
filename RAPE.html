@@ -35,7 +35,6 @@
             text-decoration: none;
             text-align: center;
         }
-
         #wholenav li a:hover {
             background-color: #555;
             color: white;
@@ -51,9 +50,15 @@
             margin-top: -65px;
             float:left;
             height: 0;
+            color: white;
         }
+        #wholenav ul ul a {
+            color: white;
+        }
+        
         #wholenav ul li:hover ul {
             visibility:visible;
+            color: white;
         }
         
         </style>
@@ -73,11 +78,29 @@
                     </ul>
                 </li>
                 <li><a href="#stories">Stories</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#forums">Forums</a></li>
+                    <ul>
+                        <li><a href="#general">All</a></li>
+                        <li><a href="#colleges">Specific College</a></li>
+                    </ul>
+                <li><a href="#news">News</a>
+                    <ul>
+                        <li><a href="#general">Global</a></li>
+                        <li><a href="#general">US</a></li>
+                        <li><a href="#general">Colleges</a></li>
+                    </ul>
+                </li>
+                <li><a href="#forums">Forums</a>
+                    <ul>
+                        <li><a href="#general">All</a></li>
+                        <li><a href="#colleges">Specific College</a></li>
+                    </ul>
+                </li>
                 <li><a href="#pledge">Pledge</a></li>
                 <li><a href="#aboutus">About Us</a></li>
             </ul>
+        </div>
+        <div>
+            
         </div>
     </body>
 </html>
