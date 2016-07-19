@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .quiz {
+                text-align: center;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script>
+             $(document).ready(function(){
+            var imageUrls = {
+                "theRock": "http://goo.gl/dXkhrE",
+                "$$paper$$": "http://goo.gl/Txz3xe",
+                "ScissorHands": "http://goo.gl/83FC1E"
+            }
+            $("button").click(function(e){
+                var computerChoice = computerChooser();
+                $("img.user")[0].src = imageUrls[e.currentTarget.id];
+                $('span.user').text(e.currentTarget.id);
+                $("img.comp")[0].src = imageUrls[computerChoice];
+                $("span.comp").text(computerChoice);
+            var score= 0;
+                
+            function truee(){
+                var trueanser 
+            }
+            function falsee{
+                var falseanswer = document.
+            }
+        </script>
+    </head>
+    <body>
+        <div class= "quiz">
+            <h1> Know the Facts </h1>
+            <p> Click true or false. </p>
+            <div id="question1">
+                <h4> "Rape is for sexual gratification." </h4>
+                <button id= "truebutton" onclick = "truee()">True</button>
+                <button id= "falsebutton" onclick = "falsee()">False</button>
+            <div id=question2>
+                
+            </div>
+            
+        </div>
+    
+    </body>
+</html>
