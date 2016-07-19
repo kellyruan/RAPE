@@ -2,48 +2,81 @@
 <html>
     <head>
         <style>
-        body{
-            border: 10px double black;
-            padding:10px;
+        body {
+            padding: 10px;
         }
-        ul {
-            list-style-type: none;
+        #wholenav {
             margin-right: 20px;
             width: 200px;
             background-color: #f1f1f1;
-            height: 90%;
+            height: 82%;
             position: fixed;
             border: 3px groove #555;
-            text-align: center;
             right:0;
+            top:50px;
+            z-index: 2;
         }
-        li a {
+        #wholenav li {
+            margin-right: 20px;
+            list-style: none;
+            border-bottom: 2px solid #555;
+            
+        }
+        #wholenav li:last-child {
+            border-bottom: none;
+        }
+        
+        #wholenav ul li a {
             display: block;
             color: #000;
-            padding: 8px 8px;
+            font-size: 20px;
+            padding: 23px;
             text-decoration: none;
-            border-bottom: 2px solid #555;
+            text-align: center;
         }
-        li a:hover {
+
+        #wholenav li a:hover {
             background-color: #555;
             color: white;
         }
         .active {
             background-color: #4CAF50;
             color: white;
-    }
+        }
+        #wholenav ul ul {
+            z-index: 1;
+            visibility: hidden;
+            margin-left: -200px;
+            margin-top: -65px;
+            float:left;
+            height: 0;
+        }
+        #wholenav ul li:hover ul {
+            visibility:visible;
+        }
+        
         </style>
         <script>
             
         </script>
-        <title>RAPE: Raising Awareness of People's Experience </title>
+        <title> RAPE: Raising Awareness of People's Experience </title>
     </head>
     <body>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#about">About</a></li>
-        </ul>
+        <div id="wholenav">
+            <ul>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#info">Infographics/</br>Statistics</a>
+                    <ul>
+                        <li><a href="#general">General</a></li>
+                        <li><a href="#colleges">Colleges</a></li>
+                    </ul>
+                </li>
+                <li><a href="#stories">Stories</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#forums">Forums</a></li>
+                <li><a href="#pledge">Pledge</a></li>
+                <li><a href="#aboutus">About Us</a></li>
+            </ul>
+        </div>
     </body>
 </html>
