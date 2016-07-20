@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .quiz {
+                text-align: center;
+            }
+			body {
+				padding: 10px;
+			}
+			#wholenav {
+				margin-right: 50px;
+				width: 200px;
+				background-color: #f1f1f1;
+				height: 82%;
+				position: fixed;
+				border: 3px groove #555;
+				right:0;
+				top:50px;
+				z-index: 2;
+			}
+			#wholenav li {
+				margin-right: 20px;
+				list-style: none;
+				border-bottom: 2px solid #555;
+			}
+			#wholenav li:last-child {
+				border-bottom: none;
+			}
+			#wholenav li a:hover {
+				background-color: #555;
+				color: white;
+			}
+			#wholenav ul li a {
+				display: block;
+				color: #000;
+				font-size: 20px;
+				padding: 23px;
+				text-decoration: none;
+				text-align: center;
+			}
+			#wholenav ul li:hover ul {
+				visibility:visible;
+				color: white;
+			}
+			#wholenav ul ul {
+				z-index: 1;
+				visibility: hidden;
+				margin-left: -200px;
+				margin-top: -65px;
+				float:left;
+				height: 0;
+				color: white;
+			}
+			#wholenav ul ul a {
+				color: black;
+			}
+			.active {
+				background-color: #4CAF50;
+				color: white;
+			}
+        </style>
+    </head>
+    <body>
+        <div class= "quiz">
+            <h1> Do you know your facts? </h1>
+            <p> Choose true or false </p>
+			</div>
+            <div class="questions">
+                <h4> "Rape is for sexual gratification." </h4>
+				<form class="options">
+					 <input class="option" type="radio" name="Question1" value=2>True<br>
+					<input class="option" type="radio" name="Question1" value=1>False<br>
+				</form>
+			</div>
+            <div class="questions">
+                <h4> "Rapes are rarely reported to the police." </h4>
+				<form class="options">
+					<input class="option" type="radio" name="Question2" value=2>True<br>
+					<input class="option" type="radio" name="Question2" value=1>False<br>
+				</form>
+			</div>
+			<div class="questions">
+                <h4> "When a woman says no she really means maybe or yes." </h4>
+				<form class="options">
+					 <input class="option" type="radio" name="Question3" value=2>True<br>
+					<input class="option" type="radio" name="Question3" value=1>False<br>
+				</form>
+			</div>
+			<div class="questions">
+                <h4> "Rapes only occur by strangers in alleys." </h4>
+				<form class="options">
+					 <input class="option" type="radio" name="Question4" value=2>True<br>
+					<input class="option" type="radio" name="Question4" value=1>False<br>
+				</form>
+			</div>
+			<div class="questions">
+                <h4> "Women always lie about sexual assault to save their reputation or to get revenge on a ex-partner." </h4>
+				<form class="options">
+					 <input class="option" type="radio" name="Question5" value=2>True<br>
+					<input class="option" type="radio" name="Question5" value=1>False<br>
+				</form>
+			</div>
+		    <br>
+			<input type="button" id='next' value="Next" onlick="sum_values()">		
+			
+			<!--<button id= "scorebutton" onclick = "showscore()"> Click to see your score </button>
+			<p id="score"></p>-->
+			
+        </div>
+		<script>
+		
+            var score= 0;
+            function correctanswer(){
+                score+=1;
+            }  
+			
+			function showscore() {
+				document.getElementById("score").innerHTML = "Score: " + score;
+			}
+			
+			$(document).ready(function(){
+			answers = new Object();
+			$('.option').change(function(){
+				var answer = ($(this).attr('value'))
+				var question = ($(this).attr('name'))
+				answers[question] = answer
+			})
+			var item1 = document.getElementById('questions');
+
+			var totalQuestions = $('.questions').size();
+			var currentQuestion = 0;
+			$questions = $('.questions');
+			$questions.hide();
+			$($questions.get(currentQuestion)).fadeIn();
+			$('#next').click(function(){
+				$($questions.get(currentQuestion)).fadeOut(function(){
+					currentQuestion = currentQuestion + 1;
+					if(currentQuestion == totalQuestions){
+						   var result = sum_values()
+						   //do stuff with the result
+						   alert(result);
+					}else{
+					$($questions.get(currentQuestion)).fadeIn();
+					}
+				});
+
+			});
+			});
+			
+			function sum_values(){
+				var the_sum = 0;
+				for (questions in answers){
+					the_sum = the_sum + parseInt(answers[question])
+				}
+				return the_sum
+			}
+		</script>
+		<div id="wholenav">
+            <ul>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#info">Infographics/</br>Statistics</a>
+                    <ul>
+                        <li><a href="#general">General</a></li>
+                        <li><a href="#colleges">Colleges</a></li>
+                    </ul>
+                </li>
+                <li><a href="#stories">Stories</a></li>
+                    <ul>
+                        <li><a href="#all">All</a></li>
+                        <li><a href="#specific_colleges">Specific College</a></li>
+                    </ul>
+                <li><a href="#news">News</a>
+                    <ul>
+                        <li><a href="#global">Global</a></li>
+                        <li><a href="#us">US</a></li>
+                        <li><a href="#colleges">Colleges</a></li>
+                    </ul>
+                </li>
+                <li><a href="#forums">Forums</a>
+                    <ul>
+                        <li><a href="#all">All</a></li>
+                        <li><a href="#specific_colleges">Specific College</a></li>
+                    </ul>
+                </li>
+                <li><a href="#pledge">Pledge</a></li>
+                <li><a href="#about_us">About Us</a></li>
+            </ul>
+        </div>
+    </body>
+</html>
