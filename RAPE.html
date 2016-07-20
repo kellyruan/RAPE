@@ -78,6 +78,7 @@
 				z-index: 2;
 			}
 			#wholenav li {
+                z-index: -1;
 				margin-right: 20px;
 				list-style: none;
 				border-bottom: 2px solid #555;
@@ -104,18 +105,45 @@
 			#wholenav ul ul {
 				z-index: 1;
 				visibility: hidden;
-				margin-left: -200px;
-				margin-top: -65px;
+				margin-left: -160px;
 				float:left;
+                margin-top: -70px;
 				height: 0;
 				color: white;
+                background-color: #555;
 			}
 			#wholenav ul ul a {
 				color: white;
+                background-color: #555
 			}
 			.active {
 				background-color: #4CAF50;
 				color: white;
+			}
+            #bottomnav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                background-color: white;
+                position: fixed;
+                bottom: 0;
+                width: 50%;
+            }
+            #bottomnav ul li a {
+                display: block;
+                color: black;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            #bottomnav li {
+				margin-left: 20px;
+				list-style: none;
+				border-right: 2px solid #555;
+                float: left;
+			}
+            #bottomnav li:last-child {
+				border-right: none;
 			}
 		</style>
 	</head>
@@ -140,11 +168,12 @@
                         <li><a href="#colleges">Colleges</a></li>
                     </ul>
                 </li>
-                <li><a href="#stories">Stories</a></li>
+                <li><a href="#stories">Stories</a>
                     <ul>
                         <li><a href="#all">All</a></li>
-                        <li><a href="#specific_colleges">Specific College</a></li>
+                        <li><a href="#specific_colleges">Specific </br> College</a></li>
                     </ul>
+                </li>
                 <li><a href="#news">News</a>
                     <ul>
                         <li><a href="#global">Global</a></li>
@@ -155,12 +184,19 @@
                 <li><a href="#forums">Forums</a>
                     <ul>
                         <li><a href="#all">All</a></li>
-                        <li><a href="#specific_colleges">Specific College</a></li>
+                        <li><a href="#specific_colleges">Specific </br> College</a></li>
                     </ul>
                 </li>
                 <li><a href="#pledge">Pledge</a></li>
                 <li><a href="#about_us">About Us</a></li>
             </ul>
+        </div>
+        <div id="bottomnav">
+            <ul>
+                <li><a target="_blank" href="https://www.rainn.org/about-national-sexual-assault-telephone-hotline">Hotline: 800.656.HOPE (4673)</a></li>
+                <li><a target="_blank" href="https://hotline.rainn.org/online/terms-of-service.jsp">Chat Room: Click to chat online</a></li>
+            </ul>
+        </div>
         </div>
 	</body>
 </html>
