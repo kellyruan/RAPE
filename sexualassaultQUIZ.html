@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+			<script type="text/javascript">
+            /*var score= 0;
+            function correctanswer(){
+                score+=1;
+            }  
+			function showscore() {
+				document.getElementById("score").innerHTML = "Score: " + score;
+			}*/
+$(document).ready(function(){
+answers = new Object();
+$('.option').change(function(){
+    var answer = ($(this).attr('value'))
+    var question = ($(this).attr('name'))
+    answers[question] = answer
+})
+var item1 = document.getElementById('questions');
+
+var totalQuestions = $('.questions').size();
+var currentQuestion = 0;
+$questions = $('.questions');
+$questions.hide();
+$($questions.get(currentQuestion)).fadeIn();
+$('#next').click(function(){
+    $($questions.get(currentQuestion)).fadeOut(function(){
+        currentQuestion = currentQuestion + 1;
+        if(currentQuestion == totalQuestions){
+               var result = sum_values()
+               //do stuff with the result
+               alert(result);
+        }else{
+        $($questions.get(currentQuestion)).fadeIn();
+        }
+    });
+
+});
+});
+
+
+function sum_values(){
+var the_sum = 0;
+for (questions in answers){
+    the_sum = the_sum + parseInt(answers[question])
+}
+return the_sum
+}
+		</script>
+        <style>
+            .quiz {
+                text-align: center;
+            }
+			body {
+				padding: 10px;
+			}
+			#wholenav {
+				margin-right: 50px;
+				width: 200px;
+				background-color: #f1f1f1;
+				height: 82%;
+				position: fixed;
+				border: 3px groove #555;
+				right:0;
+				top:50px;
+				z-index: 2;
+			}
+			#wholenav li {
+				margin-right: 20px;
+				list-style: none;
+				border-bottom: 2px solid #555;
+			}
+			#wholenav li:last-child {
+				border-bottom: none;
+			}
+			#wholenav li a:hover {
+				background-color: #555;
+				color: white;
+			}
+			#wholenav ul li a {
+				display: block;
+				color: #000;
+				font-size: 20px;
+				padding: 23px;
+				text-decoration: none;
+				text-align: center;
+			}
+			#wholenav ul li:hover ul {
+				visibility:visible;
+				color: white;
+			}
+			#wholenav ul ul {
+				z-index: 1;
+				visibility: hidden;
+				margin-left: -200px;
+				margin-top: -65px;
+				float:left;
+				height: 0;
+				color: white;
+			}
+			#wholenav ul ul a {
+				color: black;
+			}
+			.active {
+				background-color: #4CAF50;
+				color: white;
+			}
+            
+            h4 {
+                text-align: center;
+                font-size: 20px;
+            }
+            
+            h1{
+            text-align: center;
+            font-size= 30px;
+            }
+            
+            
+            border{
+                border-style: dotted;
+                border-width: medium;
+            }
+            
+        </style>
+    </head>
+    <body>
+<script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+			<script type="text/javascript">
+
+$(document).ready(function(){
+answers = new Object();
+$('.option').change(function(){
+    var answer = ($(this).attr('value'))
+    var question = ($(this).attr('name'))
+    answers[question] = answer
+})
+var item1 = document.getElementById('questions');
+
+var totalQuestions = $('.questions').size();
+var currentQuestion = 0;
+$questions = $('.questions');
+$questions.hide();
+$($questions.get(currentQuestion)).fadeIn();
+$('#next').click(function(){
+    $($questions.get(currentQuestion)).fadeOut(function(){
+        currentQuestion = currentQuestion + 1;
+        if(currentQuestion == totalQuestions){
+               var result = sum_values()
+               //do stuff with the result
+               alert(result);
+        }else{
+        $($questions.get(currentQuestion)).fadeIn();
+        }
+    });
+
+});
+});
+
+
+function sum_values(){
+var the_sum = 0;
+for (questions in answers){
+    the_sum = the_sum + parseInt(answers[question])
+}
+return the_sum
+}
+</script>
+
+<body>
+    <body style= "background-color:#A07671;">
+    <font face="verdana" color="black">
+    <style align: center;></style>
+    
+<div>
+    <h1> Do you  know your facts?</h1>
+</div>
+<div class="questions">
+    <p> <h4> 1. Rape is for sexual gratification? <h4></p>
+    <form class="options">
+        <input class="option" type="radio" name="question1" value=4>TRUE<br>
+        <input class="option" type="radio" name="question1" value=3>FALSE<br>
+    </form>
+</div>
+<div class="questions">
+    <p><h4>2. Rapes are rarely reported to the police?</p>
+    <form class="options">
+        <input class="option" type="radio" name="question2" value=4>TRUE<br>
+        <input class="option" type="radio" name="question2" value=3>FALSE<br>
+    
+    </form>
+</div>
+<div class="questions">
+    <p><h4>3. When a woman says "no" she really means "maybe" or "yes"?<h4></p>
+    <form class="options">
+        <input class="option" type="radio" name="question3" value=4>TRUE<br>
+        <input class="option" type="radio" name="question3" value=3>FALSE<br>
+    </form>
+</div>
+<div class="questions">
+    <p><h4>4. Rapes only occur by strangers in dark alleys?<h4></p>
+    <form>
+        <input class="option" type="radio" name="question4" value=4>TRUE<br>
+        <input class="option" type="radio" name="question4" value=3>FALSE<br>
+    </form>
+</div>
+<div class="questions">
+    <p><h4>5. Women always lie about sexual assault to save their reputation or get revenge on a ex-partner?<h4></p>
+    <form>
+        <input class="option" type="radio" name="question5" value=4>TRUE<br>
+        <input class="option" type="radio" name="question5" value=3>FALSE<br>
+    </form>
+</div>
+    <input type="button" id='next' value="Next" onlick="sum_values()" style= "display: block; margin: 0 auto;">
+    <input type="hidden" value="clear">
+    
+</body>
+        
+		<div id="wholenav">
+            <ul>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#info">Infographics/</br>Statistics</a>
+                    <ul>
+                        <li><a href="#general">General</a></li>
+                        <li><a href="#colleges">Colleges</a></li>
+                    </ul>
+                </li>
+                <li><a href="#stories">Stories</a></li>
+                    <ul>
+                        <li><a href="#all">All</a></li>
+                        <li><a href="#specific_colleges">Specific College</a></li>
+                    </ul>
+                <li><a href="#news">News</a>
+                    <ul>
+                        <li><a href="#global">Global</a></li>
+                        <li><a href="#us">US</a></li>
+                        <li><a href="#colleges">Colleges</a></li>
+                    </ul>
+                </li>
+                <li><a href="#forums">Forums</a>
+                    <ul>
+                        <li><a href="#all">All</a></li>
+                        <li><a href="#specific_colleges">Specific College</a></li>
+                    </ul>
+                </li>
+                <li><a href="#pledge">Pledge</a></li>
+                <li><a href="#about_us">About Us</a></li>
+            </ul>
+        </div>
+    </body>
+</html>
