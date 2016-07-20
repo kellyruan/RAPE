@@ -7,36 +7,118 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <style>
-            .news_stories{
+            body {
+                background-color: black;
+            }
+            .news_stories {
                 background-color: black;
                 color: white;
+                text-align: center;
             }
             .carousel-inner > .item > img,
             .carousel-inner > .item > a > img {
-                width: 70%;
-                margin: auto;
+                background-color: black;
+                width: 60%;
+                margin-left: 50px;
+                margin-top: 20px;
             }
             .carousel-caption{
                 background: rgba(0,0,0,1);
+                margin-left: -240px;
             }
-            .news_stories {
+            .container{
+                background: black;
+            }
+            #wholenav {
+				margin-right: 50px;
+				width: 200px;
+				background-color: #f1f1f1;
+				height: 82%;
+				position: fixed;
+				border: 3px groove #555;
+				right:0;
+				top:50px;
+				z-index: 2;
+			}
+			#wholenav li {
+                z-index: -1;
+				margin-right: 20px;
+				list-style: none;
+				border-bottom: 2px solid #555;
+			}
+			#wholenav li:last-child {
+				border-bottom: none;
+			}
+			#wholenav li a:hover {
+				background-color: #555;
+				color: white;
+			}
+			#wholenav ul li a {
+				display: block;
+				color: #000;
+				font-size: 20px;
+				padding: 23px;
+				text-decoration: none;
+				text-align: center;
+			}
+			#wholenav ul li:hover ul {
+				visibility:visible;
+				color: white;
+			}
+			#wholenav ul ul {
+				z-index: 1;
+				visibility: hidden;
+				margin-left: -160px;
+				float:left;
+                margin-top: -70px;
+				height: 0;
+				color: white;
+                background-color: #555;
+			}
+			#wholenav ul ul a {
+				color: white;
+                background-color: #555
+			}
+			.active {
+				background-color: #4CAF50;
+				color: white;
+			}
+            #bottomnav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                background-color: white;
+                position: fixed;
+                bottom: 0;
+                width: 50%;
+            }
+            #bottomnav ul li a {
+                display: block;
+                color: black;
                 text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
             }
-            
+            #bottomnav li {
+				margin-left: 20px;
+				list-style: none;
+				border-right: 2px solid #555;
+                float: left;
+			}
+            #bottomnav li:last-child {
+				border-right: none;
+			}
         </style>
-        <script>
-        
-        
-        </script>
         <title> RAPE: News </title>
     </head>
     <body>
         <div class= "news_stories">
-            <h1> Sexual Assault at Scale</h1>
+            <a style="float:left; margin-left:30px; margin-top:10px" href="https://rawgit.com/kellyruan/RAPE/master/RAPE.html"><img id="logo" src="logo.png" height="170px"/></a>
+            <h1 style="margin-right:180px"> Sexual Assault at Scale</h1>
             <div id= "global">
                 <div class="container">
-                    <p>Click on the pictures to find more information. Additional links also provided in captions.</p>
-                    <h2> Global Stories </h2>
+                    <p style="margin-right:70px">Click on the pictures to find more information. Additional links also provided in captions.</p>
+                    <h2 style="margin-right:100px"> Global Stories </h2>
                   <br>
                   <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
@@ -86,11 +168,11 @@
                     </div>
 
                     <!-- Left and right controls -->
-                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <a style="margin-left:-150px" class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
                       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                       <span class="sr-only">Previous</span>
                     </a>
-                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <a style="margin-right:100px" class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
                       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                       <span class="sr-only">Next</span>
                     </a>
@@ -98,6 +180,41 @@
                 </div>
             </div>
         </div>
+        <div id="wholenav">
+            <ul>
+                <li><a href="https://rawgit.com/kellyruan/RAPE/master/RAPE-quiz.html">Quiz</a></li>
+                <li><a href="#info">Infographics/</br>Statistics</a>
+                    <ul>
+                        <li><a href="#general">General</a></li>
+                        <li><a href="#colleges">Colleges</a></li>
+                    </ul>
+                </li>
+                <li><a href="#stories">Stories</a>
+                    <ul>
+                        <li><a href="#all">All</a></li>
+                        <li><a href="#specific_colleges">Specific </br> College</a></li>
+                    </ul>
+                </li>
+                <li><a href="#news">News</a>
+                    <ul>
+                        <li><a href="https://rawgit.com/kellyruan/RAPE/master/newspage_global.html">Global</a></li>
+                        <li><a href="#us">US</a></li>
+                        <li><a href="#colleges">Colleges</a></li>
+                    </ul>
+                </li>
+                <li><a href="#forums">Forums</a>
+                    <ul>
+                        <li><a href="#all">All</a></li>
+                        <li><a href="#specific_colleges">Specific </br> College</a></li>
+                    </ul>
+                </li>
+                <li><a href="#pledge">Pledge</a></li>
+                <li><a href="#about_us">About Us</a></li>
+            </ul>
+        </div>
+        <script>
+        
+        
+        </script>
     </body>
 </html>
-
