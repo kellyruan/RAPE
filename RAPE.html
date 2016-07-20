@@ -1,74 +1,137 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
-    <head>
-        <style>
-        body {
-            padding: 10px;
-            background-image:url("https://s32.postimg.org/8m24f7fph/logo.png");
-        }
-        #wholenav {
-            margin-right: 20px;
-            width: 200px;
-            background-color: #f1f1f1;
-            height: 82%;
-            position: fixed;
-            border: 3px groove #555;
-            right:0;
-            top:50px;
-            z-index: 2;
-        }
-        #wholenav li {
-            margin-right: 20px;
-            list-style: none;
-            border-bottom: 2px solid #555;
-            
-        }
-        #wholenav li:last-child {
-            border-bottom: none;
-        }
-        
-        #wholenav ul li a {
-            display: block;
-            color: #000;
-            font-size: 20px;
-            padding: 23px;
-            text-decoration: none;
-            text-align: center;
-        }
-        #wholenav li a:hover {
-            background-color: #555;
-            color: white;
-        }
-        .active {
-            background-color: #4CAF50;
-            color: white;
-        }
-        #wholenav ul ul {
-            z-index: 1;
-            visibility: hidden;
-            margin-left: -200px;
-            margin-top: -65px;
-            float:left;
-            height: 0;
-            color: white;
-        }
-        #wholenav ul ul a {
-            color: white;
-        }
-        
-        #wholenav ul li:hover ul {
-            visibility:visible;
-            color: white;
-        }
-        
-        </style>
-        <script>
-            
-        </script>
-        <title> RAPE: Raising Awareness of People's Experience </title>
-    </head>
-    <body>
-        <div id="wholenav">
+	<head>
+		<title> RAPE: Raising Awareness of People's Experiences </title>
+		<style>
+			#logo
+				@import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
+				* {
+					margin: 0;
+					padding: 0;
+				}
+				body {
+					font-family: 'Oswald', sans-serif;
+					color: #fff;
+					background-color: #000;
+					text-align: center;
+				}
+				ul {
+					list-style-type: none;
+					background-image: "https://newevolutiondesigns.com/images/freebies/galaxy-wallpaper-36.jpg";
+				}
+				/* Text */
+				.clip {
+					font-size: 6em;
+					font-weight: bold;
+					line-height: 1;
+					position: relative;
+					display: inline-block;
+					margin: 20px;
+					margin-left: -500px;
+					margin-top: 30px;
+					padding: .5em ;
+					text-align: left;
+					 /* Color fallback */
+					color: #fff;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
+				.clip:before,
+				.clip:after {
+					position: absolute;
+					content: '';
+				}
+				/* Text Background (black zone) */
+				.clip:after {
+					position: absolute;
+					z-index: -1;
+					top: 20px;
+					right: 0;
+					bottom: 20px;
+					left: 0px;
+					background-color: #000;
+				}
+				/* Background */
+				.clip:before {
+					z-index: -2;
+					top: -20px;
+					right: -580px;
+					bottom: -10px;
+					left: -70px;
+					background-image: inherit;
+				}
+				.clip {
+					background-image: url("https://newevolutiondesigns.com/images/freebies/galaxy-wallpaper-36.jpg");
+				} 
+			body {
+				padding: 10px;
+			}
+			#wholenav {
+				margin-right: 50px;
+				width: 200px;
+				background-color: #f1f1f1;
+				height: 82%;
+				position: fixed;
+				border: 3px groove #555;
+				right:0;
+				top:50px;
+				z-index: 2;
+			}
+			#wholenav li {
+				margin-right: 20px;
+				list-style: none;
+				border-bottom: 2px solid #555;
+			}
+			#wholenav li:last-child {
+				border-bottom: none;
+			}
+			#wholenav li a:hover {
+				background-color: #555;
+				color: white;
+			}
+			#wholenav ul li a {
+				display: block;
+				color: #000;
+				font-size: 20px;
+				padding: 23px;
+				text-decoration: none;
+				text-align: center;
+			}
+			#wholenav ul li:hover ul {
+				visibility:visible;
+				color: white;
+			}
+			#wholenav ul ul {
+				z-index: 1;
+				visibility: hidden;
+				margin-left: -200px;
+				margin-top: -65px;
+				float:left;
+				height: 0;
+				color: white;
+			}
+			#wholenav ul ul a {
+				color: white;
+			}
+			.active {
+				background-color: #4CAF50;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="clip">
+            Raising
+            </br>
+            Awareness
+            </br>
+            of 
+            </br>
+            People's
+            </br>
+            Experiences
+		</div>
+		<div id="wholenav">
             <ul>
                 <li><a href="#quiz">Quiz</a></li>
                 <li><a href="#info">Infographics/</br>Statistics</a>
@@ -79,28 +142,25 @@
                 </li>
                 <li><a href="#stories">Stories</a></li>
                     <ul>
-                        <li><a href="#general">All</a></li>
-                        <li><a href="#colleges">Specific College</a></li>
+                        <li><a href="#all">All</a></li>
+                        <li><a href="#specific_colleges">Specific College</a></li>
                     </ul>
                 <li><a href="#news">News</a>
                     <ul>
-                        <li><a href="#general">Global</a></li>
-                        <li><a href="#general">US</a></li>
-                        <li><a href="#general">Colleges</a></li>
+                        <li><a href="#global">Global</a></li>
+                        <li><a href="#us">US</a></li>
+                        <li><a href="#colleges">Colleges</a></li>
                     </ul>
                 </li>
                 <li><a href="#forums">Forums</a>
                     <ul>
-                        <li><a href="#general">All</a></li>
-                        <li><a href="#colleges">Specific College</a></li>
+                        <li><a href="#all">All</a></li>
+                        <li><a href="#specific_colleges">Specific College</a></li>
                     </ul>
                 </li>
                 <li><a href="#pledge">Pledge</a></li>
-                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="#about_us">About Us</a></li>
             </ul>
         </div>
-        <div>
-            
-        </div>
-    </body>
+	</body>
 </html>
