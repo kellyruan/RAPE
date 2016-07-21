@@ -21,12 +21,16 @@
             .carousel-inner > .item > a > img {
                 background-color: black;
                 width: 60%;
-                margin-left: 50px;
-                margin-top: 20px;
+                margin-left: 150px;
+                margin-top: 12px;
+            }
+            .carousel-inner > .item {
+                background-color:black;
             }
             .carousel-caption{
+                width: 55%;
                 background: rgba(0,0,0,1);
-                margin-left: -240px;
+                margin-left: -50px;
             }
             .container{
                 background: black;
@@ -35,7 +39,7 @@
 			margin-right: 50px;
 			width: 200px;
 			background-color: #f1f1f1;
-			height: 82%;
+			height: 88%;
 			position: fixed;
 			border: 3px groove #555;
 			right:0;
@@ -43,11 +47,14 @@
 			z-index: 2;
 		}
 		#wholenav li {
-        z-index: -1;
+            z-index: -1;
 			margin-right: 20px;
 			list-style: none;
 			border-bottom: 2px solid #555;
 		}
+        #wholenav li:first-child {
+            margin-top:10px;
+        }
 		#wholenav li:last-child {
 			border-bottom: none;
 		}
@@ -114,16 +121,16 @@
     </head>
     <body>
         <div class= "news_stories">
-            <a style="position:fixed; float:left; margin-left:30px; margin-top:10px" href="https://rawgit.com/kellyruan/RAPE/master/homepage.html"><img id="logo" src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="170px"/></a>
-            <h1 style="margin-right:180px"> Sexual Assault at Scale</h1>
+            <a style="position:fixed; float:left; margin-left:10px; margin-top:-10px; margin-left:-610px" href="https://rawgit.com/kellyruan/RAPE/master/homepage.html"><img id="logo" src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="150px"/></a>
+            <h1 style="margin-right:80px"> <b>Sexual Assault at Scale</b></h1>
             <div id= "US">
                 <div class="container">
-                    <p style="margin-right:70px">Click on the pictures to find more information. Additional links also provided in captions.</p>
-                    <h2 style="margin-right:100px"> College Stories </h2>
+                    <p style="margin-right:70px">Click on the pictures for more information. Additional links are also provided in captions.</p>
+                    <h2 style="margin-right:100px"><b> College Stories </b></h2>
                   <br>
                   <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
-                    <ol class="carousel-indicators">
+                    <ol style="margin-left:-400px" class="carousel-indicators">
                       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                       <li data-target="#myCarousel" data-slide-to="1"></li>
                       <li data-target="#myCarousel" data-slide-to="2"></li>
@@ -183,11 +190,11 @@
                     </div>
 
                     <!-- Left and right controls -->
-                    <a style="margin-left:-150px" class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <a style="margin-left:-50px" class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
                       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                       <span class="sr-only">Previous</span>
                     </a>
-                    <a style="margin-right:100px" class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <a style="margin-right:130px" class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
                       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                       <span class="sr-only">Next</span>
                     </a>
