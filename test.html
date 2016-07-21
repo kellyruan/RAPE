@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<head>
+	<title> RAPE: Quiz </title>
+        <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			document.getElementById("questionNumber").innerHTML = "";
+			document.getElementById("previous").style.visibility = "hidden";
+			document.getElementById("next").style.visibility = "hidden";
+			document.getElementById("showscore").style.visibility = "hidden";
+			answers = new Object();
+		$('.option').change(function(){
+			var answer = ($(this).attr('value'))
+			var question = ($(this).attr('name'))
+			answers[question] = answer
+		})
+		var item1 = document.getElementById('questions');
+		var totalQuestions = $('.questions').size();
+		var currentQuestion = 0;
+		var score = 0;
+		$questions = $('.questions');
+		$questions.hide();
+        $($questions.get(currentQuestion)).fadeOut()
+		
+        $('#next1').click(function(){
+			$($questions.get(currentQuestion)).fadeOut(function(){
+				questionNumber = currentQuestion + 1;
+                 $($questions.get()).fadeOut()
+				document.getElementById("questionNumber").innerHTML = "Question " + questionNumber + "/10";
+   
+                if (currentQuestion == 1) {
+					var answer1 = document.querySelector('input[name="question1"]:checked').value;
+					if (answer1 == 3) {
+						score += 1;
+					}
+				}
+                
+				else if (currentQuestion == 2) {
+					var answer2 = document.querySelector('input[name="question2"]:checked').value;
+					if (answer2 == 4) {
+						score += 1;
+					}
+				}
+				if (currentQuestion == 3) {
+					var answer3 = document.querySelector('input[name="question3"]:checked').value;
+					if (answer3 == 3) {
+						score += 1;
+					}
+				}
+				if (currentQuestion == 4) {
+					var answer4 = document.querySelector('input[name="question4"]:checked').value;
+					if (answer4 == 3) {
+						score += 1;
+					}
+				}
+				if (currentQuestion == 5) {
+					var answer5 = document.querySelector('input[name="question5"]:checked').value;
+					if (answer5 == 4) {
+						score += 1;
+					}
+				}
+				if (currentQuestion == 6) {
+					var answer6 = document.querySelector('input[name="question6"]:checked').value;
+					if (answer6 == 4) {
+						score += 1;
+					}
+				}
+				if (currentQuestion == 7) {
+					var answer7 = document.querySelector('input[name="question7"]:checked').value;
+					if (answer7 == 3) {
+						score += 1;
+					}
+				}
+				if (currentQuestion == 8) {
+					var answer8 = document.querySelector('input[name="question8"]:checked').value;
+					if (answer8 == 4) {
+						score += 1;
+					}
+				}
+				if (currentQuestion == 9) {
+					var answer9 = document.querySelector('input[name="question9"]:checked').value;
+					if (answer9 == 4) {
+						score += 1;
+					}
+					document.getElementById("previous").style.visibility = "visible";
+					document.getElementById("next").style.visibility = "hidden";
+					document.getElementById("showscore").style.visibility = "visible";
+				}
+				if (currentQuestion == 10) {
+					var answer10 = document.querySelector('input[name="question10"]:checked').value;
+					if (answer10 == 4) {
+						score += 1;
+					}
+				}
+			
+                if (currentQuestion == totalQuestions) {
+						document.getElementById("score").innerHTML = "Score: " + score;
+						document.getElementById("questionNumber").innerHTML = "";
+				}else{
+				$($questions.get(currentQuestion)).fadeIn();
+				}
+                currentQuestion += 1;
+			});
+		}); 
+        
+		$('#showscore').click(function(){
+			$($questions.get(currentQuestion)).fadeOut(function(){
+				document.getElementById("previous").style.visibility = "hidden";
+				document.getElementById("next").style.visibility = "hidden";
+				document.getElementById("showscore").style.visibility = "hidden";
+				document.getElementById("questionNumber").innerHTML = "";
+				document.getElementById("score").innerHTML = "Score: " + score;
+			});
+		});
+        
+        
+		$('#previous').click(function(){
+			$($questions.get(currentQuestion)).fadeOut(function(){
+				currentQuestion -= 1;
+				questionNumber = currentQuestion + 1;
+				document.getElementById("questionNumber").innerHTML = "Question " + questionNumber + "/10";
+				if (currentQuestion == 0) {
+					var answer1 = document.querySelector('input[name="question1"]:checked').value;
+					if (answer1 == 3) {
+						score -= 1;
+					}
+				}
+				if (currentQuestion == 1) {
+					var answer2 = document.querySelector('input[name="question2"]:checked').value;
+					if (answer2 == 4) {
+						score -= 1;
+					}
+				}
+				if (currentQuestion == 2) {
+					var answer3 = document.querySelector('input[name="question3"]:checked').value;
+					if (answer3 == 3) {
+						score -= 1;
+					}
+				}
+				if (currentQuestion == 3) {
+					var answer4 = document.querySelector('input[name="question4"]:checked').value;
+					if (answer4 == 3) {
+						score -= 1;
+					}
+				}
+				if (currentQuestion == 4) {
+					var answer5 = document.querySelector('input[name="question5"]:checked').value;
+					if (answer5 == 4) {
+						score -= 1;
+					}
+				}
+				if (currentQuestion == 5) {
+					var answer6 = document.querySelector('input[name="question6"]:checked').value;
+					if (answer6 == 4) {
+						score -= 1;
+					}
+				}
+				if (currentQuestion == 6) {
+					var answer7 = document.querySelector('input[name="question7"]:checked').value;
+					if (answer7 == 3) {
+						score -= 1;
+					}
+				}
+				if (currentQuestion == 7) {
+					var answer8 = document.querySelector('input[name="question8"]:checked').value;
+					if (answer8 == 4) {
+						score -= 1;
+					}
+				}
+				if (currentQuestion == 8) {
+					var answer9 = document.querySelector('input[name="question9"]:checked').value;
+					if (answer9 == 4) {
+						score -= 1;
+					}
+					document.getElementById("previous").style.visibility = "visible";
+					document.getElementById("next").style.visibility = "visible";
+					document.getElementById("showscore").style.visibility = "hidden";
+				}
+				if (currentQuestion == 9) {
+					var answer10 = document.querySelector('input[name="question10"]:checked').value;
+					if (answer10 == 4) {
+						score -= 1;
+					}
+				}
+				$($questions.get(currentQuestion)).fadeIn();
+			});
+		});
+		});
+	</script>
+    
+    	
+	<body style= "background-color:#A07671;">
+	<font face="verdana" color="white">
+	<style align="center"></style>
+	<div>
+		<h1 style="text-align:center; font-size="30px"> Do you know your facts? </h1>
+		<h3 style="text-align:center; font-size="15px"> Test your knowledge by choosing true or false for each question. </h3>
+        <h3 style="text-align:center; font=size="10px"> Click the "NEXT" button to take the test.<h3>
+        <h2 style="text-align:center; font-size="25px"> GOOD LUCK!<h2>
+
+	</div>
+    <div class="next button">
+        <input type="button" id="next1" value="NEXT" style= "display: block; margin: 0 auto;">
+    </div>
+    
+	<p style="margin-left: 100px; font-size:20px" id="questionNumber">
+	<div style="text-align:"center;" "font-size:"30px;">
+	<div class="questions">
+		<p><h4> 1. Rape is often used for sexual gratification purposes. <h4></p>
+		<form class="options">
+			<input class="option" type="radio" name="question1" value=4>TRUE<br>
+			<input class="option" type="radio" name="question1" value=3>FALSE<br>
+		</form>
+	</div>
+    
+	<div class="questions">
+		<p><h4> 2. Rape incidences are rarely reported to the police.<h4></p>
+		<form class="options">
+			<input class="option" type="radio" name="question2" value=4>TRUE<br>
+			<input class="option" type="radio" name="question2" value=3>FALSE<br>
+		</form>
+	</div>
+    
+	<div class="questions">
+		<p><h4> 3. When a woman says "no", she really means "maybe" or "yes". <h4></p>
+		<form class="options">
+			<input class="option" type="radio" name="question3" value=4>TRUE<br>
+			<input class="option" type="radio" name="question3" value=3>FALSE<br>
+		</form>
+	</div>
+    
+	<div class="questions">
+		<p><h4> 4. Rapes occur most often in dark alleys. <h4></p>
+		<form>
+			<input class="option" type="radio" name="question4" value=4>TRUE<br>
+			<input class="option" type="radio" name="question4" value=3>FALSE<br>
+		</form>
+	</div>
+    
+	<div class="questions">
+		<p><h4> 5. Women lie about sexual assault in order to save their reputation. <h4></p>
+		<form>
+			<input class="option" type="radio" name="question5" value=4>TRUE<br>
+			<input class="option" type="radio" name="question5" value=3>FALSE<br>
+		</form>
+	</div>
+    
+	<div class="questions">
+		<p><h4> 6. Rapes happen every day. <h4></p>
+		<form>
+			<input class="option" type="radio" name="question6" value=4>TRUE<br>
+			<input class="option" type="radio" name="question6" value=3>FALSE<br>
+		</form>
+	</div>
+    
+	<div class="questions">
+		<p><h4> 7. Sexual assaults are often achieved with the help of weapons. <h4></p>
+		<form>
+			<input class="option" type="radio" name="question7" value=4>TRUE<br>
+			<input class="option" type="radio" name="question7" value=3>FALSE<br>
+		</form>
+	</div>
+    
+	<div class="questions">
+		<p><h4> 8. Young adults are at the highest risk of being raped. <h4></p>
+		<form>
+			<input class="option" type="radio" name="question8" value=4>TRUE<br>
+			<input class="option" type="radio" name="question8" value=3>FALSE<br>
+		</form>
+	</div>
+    
+	<div class="questions">
+		<p><h4> 9. Rapes are crimes of violence, anger, power, and revenge. <h4></p>
+		<form>
+			<input class="option" type="radio" name="question9" value=4>TRUE<br>
+			<input class="option" type="radio" name="question9" value=3>FALSE<br>
+		</form>
+	</div>
+    
+	<div class="questions">
+		<p><h4> 10. The culture of violence that we live in contributes to sexual violence. <h4></p>
+		<form>
+			<input class="option" type="radio" name="question10" value=4>TRUE<br>
+			<input class="option" type="radio" name="question10" value=3>FALSE<br>
+		</form>
+	</div>
+    
+	<input type="button" id='next' value="Next" style= "display: block; margin: 0 auto;">
+	<input type="button" id='previous' value="Previous" style= "display: block; margin: 0 auto;">
+    <input type="button" id='showscore' value="Show Score" style= "display: block; margin: 0 auto;">
+	<input type="hidden" value="clear">
+	<p style="font-size=80px" id="score" align="center">
+	</div>
+    
