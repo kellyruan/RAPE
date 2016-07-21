@@ -1,22 +1,73 @@
-<!DOCTYPE>
+<DOCTYPE html!>
 <html lang="en"> 
+<head>
 <meta charset="utf-8"/>
 <html>
-<head>
-    <title> RAPE: Infographics/Statistics </title>
-    <style>
-        body {
-			padding: 10px;
-		}
-		#wholenav {
-			margin-right: 50px;
+    <head>
+        <style>
+            h1{
+                color:#80BD9E;
+                margin-top: 50px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 50px;
+                padding-right: -50px;
+                max-width: 440px;
+                border: 5px black double;
+                border-radius: 10px;
+            }
+            body{
+                color: white;
+            }
+            .definition{
+                padding: 50px;  
+                padding-left: 50px;
+                padding-right: 400px;
+                max-width: 1000px;
+                background-color: #89DA59;
+                border-radius: 10px;
+                margin-bottom: -2px;
+            }
+            .theline{
+                padding: 60px;
+                text-align: right;
+                background-color: #80BD9E;
+                border-radius: 10px;
+            }
+            .victims {
+                padding: 50px;  
+                padding-left: 50px;
+                padding-right: 400px;
+                max-width: 1000px;
+                background-color: #89DA59;
+                border-radius: 10px;
+                margin-bottom: -2px;
+            }
+            .censorship {
+                padding-left: 200px;
+                padding: 60px;
+                text-align: right;
+                background-color: #80BD9E;
+                border-radius: 10px;
+            }
+            .facts {
+                padding: 50px;  
+                padding-left: 50px;
+                padding-right: 400px;
+                max-width: 1000px;
+                background-color: #89DA59;
+                border-radius: 10px;
+                margin-bottom: -2px;
+            }
+            #wholenav {
+			margin-right: 10px;
 			width: 200px;
 			background-color: #f1f1f1;
 			height: 82%;
-			position: fixed;
 			border: 3px groove #555;
+            position:absolute;
 			right:0;
-			top:50px;
+			top:180px;
 			z-index: 2;
 		}
 		#wholenav li {
@@ -79,46 +130,98 @@
         text-decoration: none;
     }
     #bottomnav li {
-			margin-left: 20px;
+			margin-left: 0px;
 			list-style: none;
 			border-right: 2px solid #555;
-        float: left;
+            float: left;
 		}
     #bottomnav li:last-child {
 			border-right: none;
 		}
-    </style>
-    <script>
-        function bigImg(x) {
-            x.style.height = "500px";
-        }
+        </style>
+        <script>
+            function infoImg(pic,source) {
+                var infopic= document.getElementById(pic);
+                infopic.style.height = "500px";
+                infopic.src = source;
+                 
+            }
 
-        function normalImg(x) {
-            x.style.height = "300px";
-        }
-    </script>
-</head>
-<body>
-    <a style="position:fixed; float:left; margin-left:30px; margin-top:10px" href="https://rawgit.com/kellyruan/RAPE/master/homepage.html"><img id="logo" src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="170px"/></a>
-    <h1>Sexual Assualt...</h1>
-    <div class= 
-        <h2>What is it?</h2>
+            function iconImg(pic, source) {
+                var icon= document.getElementById(pic);
+                icon.style.height = "300px";
+                icon.src = source;
+            }
+        </script>
+    </head>
+    <body>
+    <a style="float:left; margin-left:-10px; margin-top:-50px" href="https://rawgit.com/kellyruan/RAPE/master/homepage.html"><img id="logo" src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="170px"/></a>
+    
+        <h1>Sexual Assualt... It's Real</h1>
+        <br/>
+        <br/>
+        <br/>
+    <div class= "definition">
+        <h2> What is it? </h2>
         <p>Sexual assault is a crime of power and control. The term sexual assault refers to sexual contact or behavior that occurs without explicit consent of the victim. Some forms of sexual assault include:
 
             <li>Penetration of the victim’s body, also known as rape.</li>
             <li>Attempted rape</li>
             <li>Forcing a victim to perform sexual acts, such as oral sex or penetrating the perpetrator’s body</li>
             <li>Fondling or unwanted sexual touching</li></p>
-    <div class= "infographics">
-        <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="https://www.rainn.org/sites/default/files/Number_of_People_Victimized_In_One_Year%2006316.svg" ALT="image" width="500" height="500" hspace="80">
-        <p> "Every 2 minutes an American is sexually assaulted." </p>
-        <img src="http://www.themaneater.com/media/2013/1023/graphics/sexualassault010_jpg_775x525_q85.jpg" ALT="image" width="400" height="400" padding-top="100">      
-        <h3> "35.8% of sexual assaults occur when the victim is between the ages of 12 and 17."</h3>
+        <img src = "https://s3.amazonaws.com/user-media.venngage.com/446608-0fb2d0b5b250851f8c85c968ae4ca5d6.jpg" height= "300px">
         </div>
-    <div class= "videos">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/iJ-uoroILu4" frameborder="0" allowfullscreen></iframe>
+    <div class= "theline">
+        <h2>Drawing the line.</h2>
+        <h3> Well, what is consent? </h3>
+        <p>This video makes consent as easy as 1, 2, 3.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/pZwvrxVavnQ" frameborder="0" allowfullscreen></iframe>
+	</div>
+    <div class= "victims">
+        <h2>Who are the victims?</h2>
+        <p> Roll over the image below to find out.</p>
+        <img id = icon_1 onmouseover="infoImg('icon_1','https://www.rainn.org/sites/default/files/Number_of_People_Victimized_In_One_Year%2006316.svg')" onmouseout= "iconImg('icon_1','http://deathwishinc.com/files/dw.logo.victims.high.jpg')" src="http://deathwishinc.com/files/dw.logo.victims.high.jpg" height= "300px">
+        <br/>
     </div>
-	<div id="wholenav">
+    <div class= "censorship">
+        <h2>Our Censorship Culture</h2>
+        <p> Look at the hidden reality below</p>
+        <img id = icon_2 onmouseover="infoImg('icon_2','http://www.themaneater.com/media/2013/1023/graphics/sexualassault010_jpg_775x525_q85.jpg')" onmouseout= "iconImg('icon_2','http://images.huffingtonpost.com/2015-06-22-1434996537-2661880-ThinkstockPhotos186213710-thumb.jpg')" src="http://images.huffingtonpost.com/2015-06-22-1434996537-2661880-ThinkstockPhotos186213710-thumb.jpg" maxheight= "300px">
+        <br/>
+        <h2> We live in a country that values silence instead of speaking out. </h2>
+        <p>The documentary below summarizes the how the world takes rape culture as a fantasy and mostly blames the victim for wearing something "revealing" or being somewhere at the wrong time.</p>
+        <br/>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/iJ-uoroILu4" frameborder="0" allowfullscreen></iframe>
+        </div>
+    <div class= "facts">
+        <h2> Quick Facts </h2>
+        <marquee loop= INFINITE behavior="scroll" direction="up" scrollamount="3" style="height:100px; font-size:24px">"Every 2 minutes an American is sexually assaulted." 
+			<br/>
+			<br/>
+			<br/>
+			"35.8% of sexual assaults occur when the victim is between the ages of 12 and 17."
+			<br/>
+			<br/>
+			<br/>
+			"Less than 10% of sexual assaults are reported to the police."
+			<br/>
+			<br/>
+			<br/>
+			"97% of rapists will never spend a single day in jail."
+            <br/>
+            <br/>
+            <br/>
+            "Marital rape is one of the most common type of sexual violence across Asia."
+            <br/>
+            <br/>
+            <br/>
+            "Women are not the only people raped, although their statics are high. Men are also sexual abused."
+			</marquee>
+            <br/>
+            <br/>
+         <a href ="https://rawgit.com/kellyruan/RAPE/master/quiz_facts.html" >Test your knoledge now with our quiz.</a>
+    </div>
+<div id="wholenav">
     <ul>
         <li><a href="https://rawgit.com/kellyruan/RAPE/master/quiz_facts.html">Quiz</a></li>
         <li><a>Infographics/</br>Statistics</a>
