@@ -21,21 +21,25 @@
             .carousel-inner > .item > a > img {
                 background-color: black;
                 width: 60%;
-                margin-left: 50px;
-                margin-top: 20px;
+                margin-left: 150px;
+                margin-top: 12px;
+            }
+            .carousel-inner > .item {
+                background-color:black;
             }
             .carousel-caption{
+                width: 55%;
                 background: rgba(0,0,0,1);
-                margin-left: -240px;
+                margin-left: -50px;
             }
             .container{
                 background: black;
             }
-            #wholenav {
+        #wholenav {
 			margin-right: 50px;
 			width: 200px;
 			background-color: #f1f1f1;
-			height: 82%;
+			height: 88%;
 			position: fixed;
 			border: 3px groove #555;
 			right:0;
@@ -43,11 +47,14 @@
 			z-index: 2;
 		}
 		#wholenav li {
-        z-index: -1;
+            z-index: -1;
 			margin-right: 20px;
 			list-style: none;
 			border-bottom: 2px solid #555;
 		}
+        #wholenav li:first-child {
+            margin-top:10px;
+        }
 		#wholenav li:last-child {
 			border-bottom: none;
 		}
@@ -115,26 +122,24 @@
     <body>
         
  <div class= "news_stories">
-            <a style="position:fixed; float:left; margin-left:30px; margin-top:10px" href="https://rawgit.com/kellyruan/RAPE/master/homepage.html"><img id="logo" src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="170px"/></a>
-            <h1 style="margin-right:180px"> Sexual Assault at Scale</h1>
+            <a style="position:fixed; float:left; margin-left:10px; margin-top:-10px; margin-left:-610px" href="https://rawgit.com/kellyruan/RAPE/master/homepage.html"><img id="logo" src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="150px"/></a>
+            <h1 style="margin-right:80px"><b> Sexual Assault at Scale</b></h1>
             <div id= "US">
                 <div class="container">
-                    <p style="margin-right:70px">Click on the pictures to find more information. Additional links also provided in captions.</p>
-                    <h2 style="margin-right:100px"> US Stories </h2>
+                    <p style="margin-right:70px">Click on the pictures for more information. Additional links are also provided in captions.</p>
+                    <h2 style="margin-right:100px"> <b>US Stories </b></h2>
                   <br>
                   <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
-                    <ol class="carousel-indicators">
+                    <ol style="margin-left:-400px" class="carousel-indicators">
                       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                       <li data-target="#myCarousel" data-slide-to="1"></li>
-                        
                     </ol>
-
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
 
                       <div class="item active">
-                        <a target = "_blank" href= "https://www.youtube.com/watch?v=pbKiOibGFkE"><img src="https://i.ytimg.com/vi/pbKiOibGFkE/hqdefault.jpg" alt="USArmy" width="460" height="345"></a>
+                        <a target = "_blank" href= "https://www.youtube.com/watch?v=pbKiOibGFkE"><img src="http://ichef-1.bbci.co.uk/news/660/media/images/83501000/jpg/_83501581_47bd20d3-5a7c-49ac-a17d-595a9f8e6a43.jpg" alt="USArmy" width="460" height="345"></a>
                         <div class="carousel-caption">
                           <h3>Sexual Assault in the US Army</h3>
                           <p> Victims barely speak out, and when they do, they are retaliated against.</p>
@@ -143,21 +148,21 @@
                       </div>
 
                       <div class="item">
-                        <a target= "_blank" href= "http://www.nbcnews.com/news/us-news/sexual-assault-reports-cast-shadow-over-summer-concerts-n604586"> <img src="http://southsoundmag.com/wp-content/uploads/2012/06/iStock_000010165862XLarge.jpg" alt="summerconcerts" width="460" height="345"> </a>
+                        <a target= "_blank" href= "http://www.nbcnews.com/news/us-news/sexual-assault-reports-cast-shadow-over-summer-concerts-n604586"> <img src="http://southsoundmag.com/wp-content/uploads/2012/06/iStock_000010165862XLarge.jpg" alt="summerconcerts" width="460" height="250"> </a>
                         <div class="carousel-caption">
                           <h3>Sexual Assault during Summer Concerts</h3>
-                          <p>Attending summer concerts has become as much of seasonal tradition as backyard barbecues and lazy afternoons at the beach, but the persistent threat of sexual violence has supplied a dangerous undercurrent to what should be a innocuous atmosphere. </p>
+                          <p>Attending summer concerts has become a seasonal tradition, but the threat of sexual <br> violence has supplied a dangerous undercurrent to the atmosphere. </p>
                         </div>
                       </div>
                         
                     </div>
 
                     <!-- Left and right controls -->
-                    <a style="margin-left:-150px" class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <a style="margin-left:-50px" class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
                       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                       <span class="sr-only">Previous</span>
                     </a>
-                    <a style="margin-right:100px" class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <a style="margin-right:130px" class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
                       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                       <span class="sr-only">Next</span>
                     </a>
