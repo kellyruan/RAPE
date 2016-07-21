@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <title> RAPE: News </title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -9,6 +10,7 @@
         <style>
             body {
                 background-color: black;
+                padding: 10px;
             }
             .news_stories {
                 background-color: black;
@@ -30,90 +32,90 @@
                 background: black;
             }
             #wholenav {
-				margin-right: 50px;
-				width: 200px;
-				background-color: #f1f1f1;
-				height: 82%;
-				position: fixed;
-				border: 3px groove #555;
-				right:0;
-				top:50px;
-				z-index: 2;
-			}
-			#wholenav li {
-                z-index: -1;
-				margin-right: 20px;
-				list-style: none;
-				border-bottom: 2px solid #555;
-			}
-			#wholenav li:last-child {
-				border-bottom: none;
-			}
-			#wholenav li a:hover {
-				background-color: #555;
-				color: white;
-			}
-			#wholenav ul li a {
-				display: block;
-				color: #000;
-				font-size: 20px;
-				padding: 23px;
-				text-decoration: none;
-				text-align: center;
-			}
-			#wholenav ul li:hover ul {
-				visibility:visible;
-				color: white;
-			}
-			#wholenav ul ul {
-				z-index: 1;
-				visibility: hidden;
-				margin-left: -160px;
-				float:left;
-                margin-top: -70px;
-				height: 0;
-				color: white;
-                background-color: #555;
-			}
-			#wholenav ul ul a {
-				color: white;
-                background-color: #555
-			}
-			.active {
-				background-color: #4CAF50;
-				color: white;
-			}
-            #bottomnav ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                background-color: white;
-                position: fixed;
-                bottom: 0;
-                width: 50%;
-            }
-            #bottomnav ul li a {
-                display: block;
-                color: black;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-            }
-            #bottomnav li {
-				margin-left: 20px;
-				list-style: none;
-				border-right: 2px solid #555;
-                float: left;
-			}
-            #bottomnav li:last-child {
-				border-right: none;
-			}
+			margin-right: 50px;
+			width: 200px;
+			background-color: #f1f1f1;
+			height: 82%;
+			position: fixed;
+			border: 3px groove #555;
+			right:0;
+			top:50px;
+			z-index: 2;
+		}
+		#wholenav li {
+        z-index: -1;
+			margin-right: 20px;
+			list-style: none;
+			border-bottom: 2px solid #555;
+		}
+		#wholenav li:last-child {
+			border-bottom: none;
+		}
+		#wholenav li a:hover {
+			background-color: #555;
+			color: white;
+		}
+		#wholenav ul li a {
+			display: block;
+			color: #000;
+			font-size: 20px;
+			padding: 23px;
+			text-decoration: none;
+			text-align: center;
+		}
+		#wholenav ul li:hover ul {
+			visibility:visible;
+			color: white;
+		}
+		#wholenav ul ul {
+			z-index: 1;
+			visibility: hidden;
+			margin-left: -160px;
+			float:left;
+        margin-top: -70px;
+			height: 0;
+			color: white;
+        background-color: #555;
+		}
+		#wholenav ul ul a {
+			color: white;
+        background-color: #555
+		}
+		.active {
+			background-color: #4CAF50;
+			color: white;
+		}
+    #bottomnav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        position: fixed;
+        bottom: 0;
+        width: 50%;
+    }
+    #bottomnav ul li a {
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    #bottomnav li {
+			margin-left: 20px;
+			list-style: none;
+			border-right: 2px solid #555;
+        float: left;
+		}
+    #bottomnav li:last-child {
+			border-right: none;
+		}
         </style>
-        <title> RAPE: News </title>
     </head>
     <body>
-        <div class= "news_stories">
-            <a style="float:left; margin-left:30px; margin-top:10px" href="https://rawgit.com/kellyruan/RAPE/master/RAPE.html"><img id="logo" src="logo.png" height="170px"/></a>
+        
+ <div class= "news_stories">
+            <a style="float:left; margin-left:30px; margin-top:10px" href="https://rawgit.com/kellyruan/RAPE/master/homepage.html"><img id="logo" src="logo.png" height="170px"/></a>
             <h1 style="margin-right:180px"> Sexual Assault at Scale</h1>
             <div id= "US">
                 <div class="container">
@@ -164,36 +166,43 @@
             </div>
         </div>
         <div id="wholenav">
+    <ul>
+        <li><a href="https://rawgit.com/kellyruan/RAPE/master/quiz.html">Quiz</a></li>
+        <li><a>Infographics/</br>Statistics</a>
             <ul>
-                <li><a href="https://rawgit.com/kellyruan/RAPE/master/RAPE-quiz.html">Quiz</a></li>
-                <li><a href="#info">Infographics/</br>Statistics</a>
-                    <ul>
-                        <li><a href="#general">General</a></li>
-                        <li><a href="#colleges">Colleges</a></li>
-                    </ul>
-                </li>
-                <li><a href="#stories">Stories</a>
-                    <ul>
-                        <li><a href="#all">All</a></li>
-                        <li><a href="#specific_colleges">Specific </br> College</a></li>
-                    </ul>
-                </li>
-                <li><a href="#news">News</a>
-                    <ul>
-                        <li><a href="https://rawgit.com/kellyruan/RAPE/master/newspage_global.html">Global</a></li>
-                        <li><a href="#us">US</a></li>
-                        <li><a href="#colleges">Colleges</a></li>
-                    </ul>
-                </li>
-                <li><a href="#forums">Forums</a>
-                    <ul>
-                        <li><a href="#all">All</a></li>
-                        <li><a href="#specific_colleges">Specific </br> College</a></li>
-                    </ul>
-                </li>
-                <li><a href="#pledge">Pledge</a></li>
-                <li><a href="#about_us">About Us</a></li>
+                <li><a href="https://rawgit.com/kellyruan/RAPE/master/info_general.html">General</a></li>
+                <li><a ="https://rawgit.com/kellyruan/RAPE/master/info_colleges.html">Colleges</a></li>
             </ul>
-        </div>
+        </li>
+        <li><a>Stories</a>
+            <ul>
+                <li><a href="https://rawgit.com/kellyruan/RAPE/master/stories_all.html">All</a></li>
+                <li><a href="https://rawgit.com/kellyruan/RAPE/master/stories_specificcollege.html">Specific </br> College</a></li>
+            </ul>
+        </li>
+        <li><a href="#news">News</a>
+            <ul>
+                <li><a href="https://rawgit.com/kellyruan/RAPE/master/news_global.html">Global</a></li>
+                <li><a href="https://rawgit.com/kellyruan/RAPE/master/news_US.html">US</a></li>
+                <li><a href="https://rawgit.com/kellyruan/RAPE/master/news_colleges.html">Colleges</a></li>
+            </ul>
+        </li>
+        <li><a>Forums</a>
+            <ul>
+                <li><a href="https://rawgit.com/kellyruan/RAPE/master/forums_all.html">All</a></li>
+                <li><a href="https://rawgit.com/kellyruan/RAPE/master/forums_specificcollege.html">Specific </br> College</a></li>
+            </ul>
+        </li>
+        <li><a href="https://rawgit.com/kellyruan/RAPE/master/pledge.html">Pledge</a></li>
+        <li><a href="https://rawgit.com/kellyruan/RAPE/master/aboutus.html">About Us</a></li>
+    </ul>
+</div>
+<div id="bottomnav">
+    <ul>
+        <li><a target="_blank" href="https://www.rainn.org/about-national-sexual-assault-telephone-hotline">Hotline: 800.656.HOPE (4673)</a></li>
+        <li><a target="_blank" href="https://hotline.rainn.org/online/terms-of-service.jsp">Chat Room: Click to chat online</a></li>
+    </ul>
+</div>
+</div>
     </body>
 </html>
