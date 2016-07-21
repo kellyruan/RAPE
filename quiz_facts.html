@@ -4,10 +4,11 @@
         <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			document.getElementById("questionNumber").innerHTML = "Question 1/10";
-			document.getElementById("previous").style.visibility = "visible";
-			document.getElementById("next").style.visibility = "visible";
+			document.getElementById("questionNumber").innerHTML = "";
+			document.getElementById("previous").style.visibility = "hidden";
+			document.getElementById("next").style.visibility = "hidden";
 			document.getElementById("showscore").style.visibility = "hidden";
+            document.getElementById("start").style.visibility = "visible";
 			answers = new Object();
 		$('.option').change(function(){
 			var answer = ($(this).attr('value'))
@@ -20,7 +21,14 @@
 		var score = 0;
 		$questions = $('.questions');
 		$questions.hide();
-		$($questions.get(currentQuestion)).fadeIn();
+		$($questions.get(currentQuestion)).fadeOut();
+        $('#start').click(function(){
+            $($questions.get(currentQuestion)).fadeIn();
+            document.getElementById("questionNumber").innerHTML = "Question 1/10";
+            document.getElementById("previous").style.visibility = "visible";
+			document.getElementById("next").style.visibility = "visible";
+            document.getElementById("start").style.visibility = "hidden";
+        });
 		$('#next').click(function(){
 			$($questions.get(currentQuestion)).fadeOut(function(){
 				currentQuestion += 1;
@@ -272,14 +280,16 @@
 	</style>
 </head>
 <body>
-	<a style="position:fixed; float:left; margin-left:30px; margin-top:200px" href="https://rawgit.com/kellyruan/RAPE/master/homepage.html"><img id="logo" src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="170px"/></a>
+	<a style="position:fixed; float:left; margin-left:30px; margin-top:400px" href="https://rawgit.com/kellyruan/RAPE/master/homepage.html"><img id="logo" src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="170px"/></a>
 	
 	<body style= "background-color:#A07671;">
 	<font face="verdana" color="black">
 	<style align: center;></style>
 	<div>
-		<h1 style="text-align:center; font-size=30px"> Do you know your facts? </h1>
-		<h2 style="text-align:center; font-size=25px; margin-left:-50px"> Test your knowledge by choosing true or false for each question. </h2>
+		<h1 style="text-align:center; font-size="30px"> Do you know your facts? </h1>
+		<h3 style="text-align:center; font-size="15px"> Test your knowledge by choosing true or false for each question. </h3>
+        <h3 style="text-align:center; font=size="10px"> Click the "NEXT" button to take the test.<h3>
+        <h2 style="text-align:center; font-size="25px"> GOOD LUCK!<h2>
 	</div>
 	<p style="margin-left: 100px; font-size:20px" id="questionNumber">
 	<div style="text-align:center; font-size=30px">
@@ -353,6 +363,7 @@
 			<input class="option" type="radio" name="question10" value=3>FALSE<br>
 		</form>
 	</div>
+    <input type="button" id='start' value="NEXT" style= "display: block; margin: 0 auto;">
 	<input type="button" id='previous' value="Previous" style= "display: block; margin: 0 auto;">
 	<input type="button" id='next' value="Next" style= "display: block; margin: 0 auto;">
 	<input type="button" id='showscore' value="Show Score" style= "display: block; margin: 0 auto;">
