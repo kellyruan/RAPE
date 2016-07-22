@@ -1,5 +1,10 @@
 <!DOCTYPE html> 
 <html>
+<head>
+	<title> RAPE: What You Can Do </title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="http://arrow.scrolltotop.com/arrow26.js"></script>
+    
 <body style= "background-color: #FFCF5F;">
 <style>
     h1 {
@@ -10,9 +15,91 @@
 		padding-right: 30;
 		text-align: center;
     }
+	#wholenav {
+			margin-right: 50px;
+			width: 200px;
+			background-color: #f1f1f1;
+			height: 82%;
+			position: absolute;
+			border: 3px groove #555;
+			right:0;
+			top:580px;
+			z-index: 2;
+		}
+		#wholenav li {
+			z-index: -1;
+			margin-right: 20px;
+			list-style: none;
+			border-bottom: 2px solid #555;
+		}
+		#wholenav li:last-child {
+			border-bottom: none;
+		}
+		#wholenav li a:hover {
+			background-color: #555;
+			color: white;
+		}
+		#wholenav ul li a {
+			display: block;
+			color: #000;
+			font-size: 20px;
+			padding: 23px;
+			text-decoration: none;
+			text-align: center;
+		}
+		#wholenav ul li:hover ul {
+			visibility:visible;
+			color: white;
+		}
+		#wholenav ul ul {
+			z-index: 1;
+			visibility: hidden;
+			margin-left: -150px;
+			float:left;
+			margin-top: -70px;
+			height: 0;
+			color: white;
+			background-color: #555;
+		}
+		#wholenav ul ul a {
+			color: white;
+			background-color: #555
+		}
+		.active {
+			background-color: #4CAF50;
+			color: white;
+		}
+		#bottomnav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			background-color: white;
+			position: fixed;
+			bottom: 0;
+			width: 50%;
+		}
+		#bottomnav ul li a {
+			display: block;
+			color: black;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+		#bottomnav li {
+			margin-left: 20px;
+			list-style: none;
+			border-right: 2px solid #555;
+			float: left;
+		}
+		#bottomnav li:last-child {
+			border-right: none;
+		}
 </style>
+</head>
 <body>
-    <font color="black" font face="Palatino Linotype, Book Antiqua, Palatino, serif">
+    <a style="position:absolute; float:left; margin-left:30px; margin-top:570px" href="https://rawgit.com/kellyruan/RAPE/master/homepage.html"><img src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="150px"/></a>
+	
+	<font color="black" font face="Palatino Linotype, Book Antiqua, Palatino, serif">
     <h1> How you can help. . . Sign our petition.</p> <br>
     <div style="text-align:center;"><IMG SRC="http://www.clker.com/cliparts/c/d/8/2/12422411301076764824Down_arrow.svg.hi.png" ALT="image" width="100" height="100"></div>
     <h2><a target="_blank" href=https://www.change.org/p/college-and-campus-rape-can-t-be-ignored?recruiter=576863465&utm_source=petitions_show_components_action_panel_wrapper&utm_medium=copylink><h2><p style="text-align:center">Click Here!</a>
@@ -22,5 +109,53 @@
 	and turn college campuses into a safer place for everyone. Sign this petition today and let people all over the world know that <br> YOU ARE HERE FOR THEM
 	and THEIR VOICE MATTERS!
 	</h5>
+	<div id="wholenav">
+    <ul>
+        <li><a>Quiz</a>
+			<ul>
+				<li><a href="https://rawgit.com/kellyruan/RAPE/master/quiz_facts.html">Facts</a></li>
+				<li><a href="https://rawgit.com/kellyruan/RAPE/master/quiz_scenarios.html">Scenarios</a></li>
+			</ul>
+		</li>
+        <li><a>Infographics/</br>Statistics</a>
+            <ul>
+                <li><a href="https://rawgit.com/kellyruan/RAPE/master/info_general.html">General</a></li>
+                <li><a href="https://rawgit.com/kellyruan/RAPE/master/info_colleges.html">Colleges</a></li>
+            </ul>
+        </li>
+        <li><a>Stories</a>
+            <ul>
+                <li><a href="https://rawgit.com/kellyruan/RAPE/master/stories_all.html">All</a></li>
+                <li><a href="https://rawgit.com/kellyruan/RAPE/master/stories_specificcollege.html">Specific </br> College</a></li>
+            </ul>
+        </li>
+        <li><a href="#news">News</a>
+            <ul>
+                <li><a href="https://rawgit.com/kellyruan/RAPE/master/news_global.html">Global</a></li>
+                <li><a href="https://rawgit.com/kellyruan/RAPE/master/news_US.html">US</a></li>
+                <li><a href="https://rawgit.com/kellyruan/RAPE/master/news_colleges.html">Colleges</a></li>
+            </ul>
+        </li>
+        <li><a>Forums</a>
+            <ul>
+                <li><a href="https://rawgit.com/kellyruan/RAPE/master/forums_all.html">All</a></li>
+                <li><a href="https://rawgit.com/kellyruan/RAPE/master/forums_specificcollege.html">Specific </br> College</a></li>
+            </ul>
+        </li>
+		<li><a>What You Can Do</a>
+            <ul>
+                <li><a href="https://rawgit.com/kellyruan/RAPE/master/petition.html">Petition</a></li>
+                <li><a href="https://rawgit.com/kellyruan/RAPE/master/staysafe.html">Stay Safe</a></li>
+            </ul>
+        </li>
+        <li><a href="https://rawgit.com/kellyruan/RAPE/master/aboutus.html">About Us</a></li>
+    </ul>
+</div>
+<div id="bottomnav">
+    <ul>
+        <li><a target="_blank" href="https://www.rainn.org/about-national-sexual-assault-telephone-hotline">Hotline: 800.656.HOPE (4673)</a></li>
+        <li><a target="_blank" href="https://hotline.rainn.org/online/terms-of-service.jsp">Chat Room: Click to chat online</a></li>
+    </ul>
+</div>
 </body>
 </html>
