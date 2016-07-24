@@ -1,167 +1,217 @@
-<!DOCTYPE html>
+<DOCTYPE html!>
+<html lang="en"> 
 <head>
-    <title> RAPE: About Us </title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script type="text/javascript" src="http://arrow.scrolltotop.com/arrow26.js"></script>
-    <style>
-        header {
-            background-image: url("http://2paragraphs.com/wp-content/uploads/2016/03/cardi-b-on-reunion.jpg");
-            background-size: 1400px 500px;
-            background-repeat: no-repeat;
-            color: white;
-            border:10px solid transparent;
-            padding: 15px;
-            border-image: url(https://s-media-cache-ak0.pinimg.com/564x/30/ce/a7/30cea7b5cb866f9379f37fb8acd5ac99.jpg) 30 round;
-        }
-        body{
+<meta charset="utf-8"/>
+<html>
+    <head>
+		<title> RAPE: Infographics/Statistics </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript" src="http://arrow.scrolltotop.com/arrow26.js"></script>
+    
+		<style>
+            h1{
+                text-align: center;
+				color: white;
+				background-color: black;
+            }
+            #pic_1{
+                background-color: black;
+                margin-left:-20px;
+                margin-right: -20px;
+                text-align: center;
+            }
+            #pic_2{
+                text-align: center;
+                margin-left:-20px;
+                margin-right: -20px;
+                background-color: black;
+            }
+            #pic_3{
+                text-align: center;
+                background-color: black;
+                margin-left:-20px;
+                margin-right: -20px;
+                
+            }
+            #video_1{
+                padding: 50px;
+				margin-left: 100px;
+                text-align: center;
+                max-width: 1000px;
+				background-color: black;
+            }
+            #quickfacts{
+                text-align: center;
+				color: white;
+                background-color: black;
+                margin-left:-20px;
+                margin-right: -20px;
+                padding: 50px;
+            }
+            body {
+                padding: 10px;
+				background-color: black;
+				border: 10px solid transparent;
+				padding: 15px;
+				border-image: url("https://s31.postimg.org/mbz4yyobf/30cea7b5cb866f9379f37fb8acd5ac99.png") 50 round;
+            }
+            #wholenav {
+                margin-right: 0px;
+                width: 200px;
+                background-color: black;
+                height: 550px;
+                position: absolute;
+				margin-top: 20px;
+                margin-right: 20px;
+                right:0;
+                top:0px;
+                z-index: 2;
+            }
+            #wholenav li {
+            z-index: -1;
+                margin-right: 20px;
+                list-style: none;
+                border-bottom: 2px solid black;
+            }
+            #wholenav li:last-child {
+                border-bottom: none;
+            }
+            #wholenav li a:hover {
+                background-color: black;
+                color: white;
+            }
+            #wholenav ul li a {
+                display: block;
+                color: white;
+                font-size: 20px;
+                padding: 23px;
+                text-decoration: none;
+                text-align: center;
+            }
+            #wholenav ul li:hover ul {
+                visibility:visible;
+                color: white;
+            }
+            #wholenav ul ul {
+                z-index: 1;
+                visibility: hidden;
+                margin-left: -150px;
+                float:left;
+            margin-top: -70px;
+                height: 0;
+                color: white;
             background-color: black;
-            padding: 10px;
-			margin-bottom:50px;
+            }
+            #wholenav ul ul a {
+                color: white;
+            background-color: black;
+            }
+            .active {
+                background-color: black;
+                color: white;
+            }
+        #bottomnav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            position: fixed;
+            bottom: 0;
+            width: 50%;
         }
-        h1 {
-            font-size: 80px;
-            font-family:Tahoma, Geneva, sans-serif;
+        #bottomnav ul li a {
+            display: block;
+            color: black;
             text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
         }
-        h2 {
-            font-size:40px;
-            font-family:Tahoma, Geneva, sans-serif;
-            text-align: center;
-            color: white;
-        }
-        h3 {
-            font-size: 20px;
-            font-family:Tahoma, Geneva, sans-serif;
-            text-align: center;
-            color: white;
-        }
-        p {
-            font-size: 15px;
-            text-align: center;
-            color: white;
-        }
-        #wholenav {
-			margin-right: 50px;
-			width: 200px;
-			background-color: #f1f1f1;
-			height: 82%;
-			position: absolute;
-			border: 3px groove #555;
-			right:0;
-			top:580px;
-			z-index: 2;
-		}
-		#wholenav li {
-			z-index: -1;
-			margin-right: 20px;
-			list-style: none;
-			border-bottom: 2px solid #555;
-		}
-		#wholenav li:last-child {
-			border-bottom: none;
-		}
-		#wholenav li a:hover {
-			background-color: #555;
-			color: white;
-		}
-		#wholenav ul li a {
-			display: block;
-			color: #000;
-			font-size: 20px;
-			padding: 23px;
-			text-decoration: none;
-			text-align: center;
-		}
-		#wholenav ul li:hover ul {
-			visibility:visible;
-			color: white;
-		}
-		#wholenav ul ul {
-			z-index: 1;
-			visibility: hidden;
-			margin-left: -150px;
-			float:left;
-			margin-top: -70px;
-			height: 0;
-			color: white;
-			background-color: #555;
-		}
-		#wholenav ul ul a {
-			color: white;
-			background-color: #555
-		}
-		.active {
-			background-color: #4CAF50;
-			color: white;
-		}
-		#bottomnav ul {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-			background-color: white;
-			position: fixed;
-			bottom: 0;
-			width: 50%;
-		}
-		#bottomnav ul li a {
-			display: block;
-			color: black;
-			text-align: center;
-			padding: 14px 16px;
-			text-decoration: none;
-		}
-		#bottomnav li {
-			margin-left: 20px;
-			list-style: none;
-			border-right: 2px solid #555;
-			float: left;
-		}
-		#bottomnav li:last-child {
-			border-right: none;
-		}
-    </style>
+        #bottomnav li {
+                margin-left: 20px;
+                list-style: none;
+                border-right: 2px solid #555;
+            float: left;
+            }
+        #bottomnav li:last-child {
+                border-right: none;
+            }
+	</style>
+        
 </head>
 <body>
-	<a style="position:absolute; float:left; margin-left:30px; margin-top:570px" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/homepage.html"><img src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="150px"/></a>
-	 <header>
-        <br></br><br></br><br></br><br></br><br></br><br></br><br></br></br></br>
-        <h1>About Us</h1>
-    </header>
-    <article>
-        <h2>Our mission</h2>
-        <p>We made this website to inform everyone how important sexual assult is.</p>
-    </article>
-    <article>
-        <h3>Dezja Sabree</h3>
-        <p>hey</p>
-    </article>
-    <article>
-        <h3>Kelly Ruan</h3>
-        <p>hey</p>
-    </article>
-    <article>
-        <h3>Zayn Muchell</h3>
-        <p>hey</p>
-    </article>
-    <article>
-        <h3>Jocelyn Chu</h3>
-        <p>hey</p>
-    </article>
-    <article>
-        <h3>Cynthia Pacheco</h3>
-        <p>hey</p>
-    </article>
-    <p style="font-size:35px"> Questions/Comments? Contact us at rapexperiences@gmail.com </p> <a href="rapexperiences@gmail.com"></a>
-
+    <a style="position:absolute; float:left; margin-left:-10px; margin-top:-10px; text-align:center" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/homepage.html"><img id="logo" src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="170px"/></a>
+    
+    
+    <div class = "infographics">
+        <h1><u>Sexual Assault of College Students</u></h1>
+        <div id= "pic_1">
+            <img src ="https://s32.postimg.org/5wljxz42t/trialpic1.png" width= "800px">
+        </div>
+        <div id = "pic_2">
+            <br/>
+            <br/>
+            <img src = "http://www.motherjones.com/files/campusSA-chart.png">
+        </div>
+        <div id="pic_3">
+            <br/>
+            <br/>
+            <img src = "https://nowgr.org/wp-content/uploads/2015/05/saam2.png">
+        </div>
+        <div id="video_1">
+            <h2> And how well do college campuses handle sexual assault?</h2>
+            <iframe width="600" height="355" src="https://www.youtube.com/embed/Z_E398OZQ88" frameborder="0" allowfullscreen></iframe>
+            <h3> Well, not well enough since most of the sexually assaulted do not report his or her assault or have resources to talk about their experiences to.</h3>
+        </div>
+        <div id="quickfacts">
+            <h2>Quick facts</h2>
+            <br/>
+            <br/>
+            <marquee loop= INFINITE behavior="scroll" direction="up" scrollamount="3.5" style="height:150px; font-size:24px">"A majority of college campus rapes happen during the 1st few weeks of the school year."
+            <br/>
+            <br/>
+            <br/>
+            "Rape results in about 32,000 pregnancies each year."
+            <br/>
+            <br/>
+            <br/>
+            "40% of rape survivors develop sexually transmitted diseases as a result of sexual assault."
+            <br/>
+            <br/>
+            <br/>
+            "Campus perpetrators are often serial offenders."
+            <br/>
+            <br/>
+            <br/>
+            "42% of raped women expect to be raped again."
+            <br/>
+            <br/>
+            <br/>
+            "Rape survivors are 13 times more likely to attempt suicide than are people who have not been victims of a crime."
+            <br/>
+            <br/>
+            <br/>
+            "4 out of 5 rape victims subsequently suffer from chronic physical or psychological conditions."
+            <br/>
+            <br/>
+            <br/>
+            "Just 12 percent of college sexual assault victims ever report the crime to law enforcement."
+            </marquee>
+            <br/>
+            <br/>
+            <br/>
+        </div>
+    </div>
+    
+    
 	<div id="wholenav">
     <ul>
         <li><a>Quiz</a>
 			<ul>
-				<li><a href=http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/quiz_facts.html">Facts</a></li>
+				<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/quiz_facts.html">Facts</a></li>
 				<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/quiz_scenarios.html">Scenarios</a></li>
 			</ul>
 		</li>
-        <li><a>Infographics/</br>Statistics</a>
+		<li><a>Infographics/</br>Statistics</a>
             <ul>
                 <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/info_general.html">General</a></li>
                 <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/info_colleges.html">Colleges</a></li>
@@ -186,7 +236,7 @@
                 <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/forums_specificcollege.html">Specific </br> College</a></li>
             </ul>
         </li>
-		<li><a>What You Can Do</a>
+        <li><a>What You Can Do</a>
             <ul>
                 <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/petition.html">Petition</a></li>
                 <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/staysafe.html">Stay Safe</a></li>
@@ -200,6 +250,7 @@
         <li><a target="_blank" href="https://www.rainn.org/about-national-sexual-assault-telephone-hotline">Hotline: 800.656.HOPE (4673)</a></li>
         <li><a target="_blank" href="https://hotline.rainn.org/online/terms-of-service.jsp">Chat Room: Click to chat online</a></li>
     </ul>
+</div>
 </div>
 </body>
 </html>
