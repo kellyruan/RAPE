@@ -2,10 +2,12 @@
 <head>
 	<title> RAPE: Quiz </title>
         <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
-	<script type="text/javascript">
+		<script type="text/javascript">
 		$(document).ready(function(){
 			document.getElementById("questionNumber").innerHTML = "";
 			document.getElementById("answers").innerHTML = "";
+			document.getElementById("takeagain").innerHTML = "";
+			document.getElementById("clickstart").innerHTML = 'Click the "Start" button to take the test.';
 			document.getElementById("previous").style.visibility = "hidden";
 			document.getElementById("next").style.visibility = "hidden";
 			document.getElementById("showscore").style.visibility = "hidden";
@@ -29,6 +31,7 @@
             document.getElementById("previous").style.visibility = "visible";
 			document.getElementById("next").style.visibility = "visible";
             document.getElementById("start").style.visibility = "hidden";
+			document.getElementById("clickstart").innerHTML = '';
         });
 		$('#next').click(function(){
 			$($questions.get(currentQuestion)).fadeOut(function(){
@@ -115,9 +118,11 @@
 				document.getElementById("score").innerHTML = "Score: " + score;
 				document.getElementById("answers").innerHTML = 
 			'1. Rape is often used for sexual gratification purposes. FALSE<br> 2. Rape incidences are rarely reported to the police. TRUE<br> 3. When a woman says "no", she really means "maybe" or "yes". FALSE<br> 4. Rapes occur most often in dark alleys. FALSE<br>5. Women lie about sexual assault in order to save their reputation. TRUE <br> 6. Rapes happen every day. TRUE<br> 7. Sexual assaults are often achieved with the help of weapons. FALSE<br>8. Young adults are at the highest risk of being raped. TRUE<br>9. Rapes are crimes of violence, anger, power, and revenge. TRUE<br>10. The culture of violence that we live in contributes to sexual violence. TRUE';
+				document.getElementById("takeagain").innerHTML = "Learn anything new? Click here to take the quiz again!";
 				
 			});
 		});
+		
 		$('#previous').click(function(){
 			$($questions.get(currentQuestion)).fadeOut(function(){
 				currentQuestion -= 1;
@@ -198,8 +203,43 @@
 		body {
 			padding: 10px;
             text color: white;
+			margin-bottom:50px;
 		}
-        
+		.button {
+			color:white;
+			border:none; 
+			color:white; 
+			font-size: 20px; 
+			border-radius: 12px; 
+			background-color: #66CDAA;
+			width: 110px;
+			height:50px;
+			transition: 0s;
+			cursor: pointer;
+		}
+		.button span {
+			cursor: pointer;
+			display: inline-block;
+			vertical-align: middle;
+			position: relative;
+			transition: 0.5s;
+		}
+		.button span:after {
+			content: "  >>";
+			position: absolute;
+			vertical-align: middle;
+			opacity: 0;
+			top: 0;
+			right: -20px;
+			transition: 0.5s;
+		}
+		.button:hover span {
+			padding-right: 25px;
+		}
+		.button:hover span:after {
+			opacity: 1;
+			right: 0;
+		}
 		#wholenav {
 			margin-right: 50px;
 			width: 200px;
@@ -282,7 +322,7 @@
 	</style>
 </head>
 <body>
-	<a style="position:fixed; float:left; margin-left:30px; margin-top:400px" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/homepage.html"><img id="logo" src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="170px"/></a>
+	<a style="position:fixed; float:left; margin-left:30px; margin-top:0px" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/homepage.html"><img id="logo" src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="170px"/></a>
 	
 	<body style= "background-color:#A07671;">
 	<font face="verdana" color="white">
@@ -290,7 +330,7 @@
 	<div>
 		<h1 style="text-align:center; font-size="30px"> Do you know your facts? </h1>
 		<h3 style="text-align:center; font-size="15px"> Test your knowledge by choosing true or false for each question. </h3>
-        <h3 style="text-align:center; font=size="10px"> Click the "NEXT" button to take the test.<h3>
+        <h3 id="clickstart" style="text-align:center; font=size="10px"><h3>
         <h2 style="text-align:center; font-size="25px"> GOOD LUCK!<h2>
 	</div>
 	<p style="margin-left: 100px; font-size:20px" id="questionNumber">
@@ -365,13 +405,14 @@
 			<input class="option" type="radio" name="question10" value=3>FALSE<br>
 		</form>
 	</div>
-    <input type="button" id='start' value="NEXT" style= "display: block; margin: 0 auto;">
-	<input type="button" id='previous' value="Previous" style= "display: block; margin: 0 auto;">
-	<input type="button" id='next' value="Next" style= "display: block; margin: 0 auto;">
-	<input type="button" id='showscore' value="Show Score" style= "display: block; margin: 0 auto;">
+    <button class="button" id='start'><span>Start  </span></button><br>
+	<button class="button" id='previous'><span>Previous  </span></button>
+	<button class="button" id='next'><span>Next  </span></button><br><br>
+	<button class="button" id='showscore'><span>Show Score  </span></button>
 	<input type="hidden" value="clear">
 	<p style="font-size=30px"id="score">
 	<p style="font-size:20px"id="answers">
+	<p><a id="takeagain" style="color:blue" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/quiz_facts.html"></a></p>
 	</div>
 	<div id="wholenav">
     <ul>
