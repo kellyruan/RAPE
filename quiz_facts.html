@@ -5,6 +5,7 @@
 		<script type="text/javascript">
 		$(document).ready(function(){
 			document.getElementById("questionNumber").innerHTML = "";
+            document.getElementById("choose").innerHTML = "";
 			document.getElementById("answers").innerHTML = "";
 			document.getElementById("takeagain").innerHTML = "";
 			document.getElementById("clickstart").innerHTML = 'Click the "Start" button to take the test.';
@@ -12,6 +13,7 @@
 			document.getElementById("next").style.visibility = "hidden";
 			document.getElementById("showscore").style.visibility = "hidden";
             document.getElementById("start").style.visibility = "visible";
+            document.getElementById('next').disabled = true;
 			answers = new Object();
 		$('.option').change(function(){
 			var answer = ($(this).attr('value'))
@@ -32,9 +34,11 @@
 			document.getElementById("next").style.visibility = "visible";
             document.getElementById("start").style.visibility = "hidden";
 			document.getElementById("clickstart").innerHTML = '';
+            document.getElementById('next').disabled = true;
         });
 		$('#next').click(function(){
-			$($questions.get(currentQuestion)).fadeOut(function(){
+            document.getElementById('next').disabled = true;
+            $($questions.get(currentQuestion)).fadeOut(function(){
 				currentQuestion += 1;
 				questionNumber = currentQuestion + 1;
 				document.getElementById("questionNumber").innerHTML = "Question " + questionNumber + "/10";
@@ -338,80 +342,81 @@
 	<div class="questions">
 		<p><h4> 1. Rape is often used for sexual gratification purposes. <h4></p>
 		<form class="options">
-			<input class="option" type="radio" name="question1" value=4>TRUE<br>
-			<input class="option" type="radio" name="question1" value=3>FALSE<br>
+			<input onclick="document.getElementById('next').disabled = false" class="option" type="radio" name="question1" value=4>TRUE<br>
+			<input onclick="document.getElementById('next').disabled = false" class="option" type="radio" name="question1" value=3>FALSE<br>
 		</form>
 	</div>
 	<div class="questions">
 		<p><h4> 2. Rape incidences are rarely reported to the police. </p>
 		<form class="options">
-			<input class="option" type="radio" name="question2" value=4>TRUE<br>
-			<input class="option" type="radio" name="question2" value=3>FALSE<br>
+			<input onclick="document.getElementById('next').disabled = false" class="option" type="radio" name="question2" value=4>TRUE<br>
+			<input onclick="document.getElementById('next').disabled = false" class="option" type="radio" name="question2" value=3>FALSE<br>
 		</form>
 	</div>
 	<div class="questions">
 		<p><h4> 3. When a woman says "no", she really means "maybe" or "yes". <h4></p>
 		<form class="options">
-			<input class="option" type="radio" name="question3" value=4>TRUE<br>
-			<input class="option" type="radio" name="question3" value=3>FALSE<br>
+			<input onclick="document.getElementById('next').disabled = false" class="option" type="radio" name="question3" value=4>TRUE<br>
+			<input onclick="document.getElementById('next').disabled = false" class="option" type="radio" name="question3" value=3>FALSE<br>
 		</form>
 	</div>
 	<div class="questions">
 		<p><h4> 4. Rapes occur most often in dark alleys. <h4></p>
 		<form>
-			<input class="option" type="radio" name="question4" value=4>TRUE<br>
-			<input class="option" type="radio" name="question4" value=3>FALSE<br>
+			<input onclick="document.getElementById('next').disabled = false" class="option" type="radio" name="question4" value=4>TRUE<br>
+			<input onclick="document.getElementById('next').disabled = false" class="option" type="radio" name="question4" value=3>FALSE<br>
 		</form>
 	</div>
 	<div class="questions">
 		<p><h4> 5. Women lie about sexual assault in order to save their reputation. <h4></p>
 		<form>
-			<input class="option" type="radio" name="question5" value=4>TRUE<br>
-			<input class="option" type="radio" name="question5" value=3>FALSE<br>
+			<input onclick="document.getElementById('next').disabled = false" class="option" type="radio" name="question5" value=4>TRUE<br>
+			<input onclick="document.getElementById('next').disabled = false" class="option" type="radio" name="question5" value=3>FALSE<br>
 		</form>
 	</div>
 	<div class="questions">
 		<p><h4> 6. Rapes happen every day. <h4></p>
 		<form>
-			<input class="option" type="radio" name="question6" value=4>TRUE<br>
-			<input class="option" type="radio" name="question6" value=3>FALSE<br>
+			<input onclick="document.getElementById('next').disabled = false" class="option" type="radio" name="question6" value=4>TRUE<br>
+			<input onclick="document.getElementById('next').disabled = false" class="option" type="radio" name="question6" value=3>FALSE<br>
 		</form>
 	</div>
 	<div class="questions">
 		<p><h4> 7. Sexual assaults are often achieved with the help of weapons. <h4></p>
 		<form>
-			<input class="option" type="radio" name="question7" value=4>TRUE<br>
-			<input class="option" type="radio" name="question7" value=3>FALSE<br>
+			<input onclick="document.getElementById('next').disabled = false" class="option" type="radio" name="question7" value=4>TRUE<br>
+			<input onclick="document.getElementById('next').disabled = false" class="option" type="radio" name="question7" value=3>FALSE<br>
 		</form>
 	</div>
 	<div class="questions">
 		<p><h4> 8. Young adults are at the highest risk of being raped. <h4></p>
 		<form>
-			<input class="option" type="radio" name="question8" value=4>TRUE<br>
-			<input class="option" type="radio" name="question8" value=3>FALSE<br>
+			<input onclick="document.getElementById('next').disabled = false" class="option" type="radio" name="question8" value=4>TRUE<br>
+			<input onclick="document.getElementById('next').disabled = false" class="option" type="radio" name="question8" value=3>FALSE<br>
 		</form>
 	</div>
 	<div class="questions">
 		<p><h4> 9. Rapes are crimes of violence, anger, power, and revenge. <h4></p>
 		<form>
-			<input class="option" type="radio" name="question9" value=4>TRUE<br>
-			<input class="option" type="radio" name="question9" value=3>FALSE<br>
+			<input onclick="document.getElementById('next').disabled = false" class="option" type="radio" name="question9" value=4>TRUE<br>
+			<input onclick="document.getElementById('next').disabled = false" class="option" type="radio" name="question9" value=3>FALSE<br>
 		</form>
 	</div>
 	<div class="questions">
 		<p><h4> 10. The culture of violence that we live in contributes to sexual violence. <h4></p>
 		<form>
-			<input class="option" type="radio" name="question10" value=4>TRUE<br>
-			<input class="option" type="radio" name="question10" value=3>FALSE<br>
+			<input onclick="document.getElementById('next').disabled = false" class="option" type="radio" name="question10" value=4>TRUE<br>
+			<input onclick="document.getElementById('next').disabled = false" class="option" type="radio" name="question10" value=3>FALSE<br>
 		</form>
 	</div>
     <button class="button" id='start'><span>Start  </span></button><br>
 	<button class="button" id='previous'><span>Previous  </span></button>
 	<button class="button" id='next'><span>Next  </span></button><br><br>
+    <p id="choose"></p>
 	<button class="button" id='showscore'><span>Show Score  </span></button>
 	<input type="hidden" value="clear">
-	<p style="font-size=30px"id="score">
-	<p style="font-size:20px"id="answers">
+	<p style="font-size=30px"id="score"></p>
+	<p style="font-size:20px"id="answers"></p>
 	<p><a id="takeagain" style="color:blue" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/quiz_facts.html"></a></p>
 	</div>
 	<div id="wholenav">
