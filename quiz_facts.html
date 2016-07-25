@@ -5,6 +5,7 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 			document.getElementById("questionNumber").innerHTML = "";
+			document.getElementById("answers").innerHTML = "";
 			document.getElementById("previous").style.visibility = "hidden";
 			document.getElementById("next").style.visibility = "hidden";
 			document.getElementById("showscore").style.visibility = "hidden";
@@ -112,6 +113,9 @@
 				document.getElementById("showscore").style.visibility = "hidden";
 				document.getElementById("questionNumber").innerHTML = "";
 				document.getElementById("score").innerHTML = "Score: " + score;
+				document.getElementById("answers").innerHTML = 
+			'1. Rape is often used for sexual gratification purposes. FALSE<br> 2. Rape incidences are rarely reported to the police. TRUE<br> 3. When a woman says "no", she really means "maybe" or "yes". FALSE<br> 4. Rapes occur most often in dark alleys. FALSE<br>5. Women lie about sexual assault in order to save their reputation. TRUE <br> 6. Rapes happen every day. TRUE<br> 7. Sexual assaults are often achieved with the help of weapons. FALSE<br>8. Young adults are at the highest risk of being raped. TRUE<br>9. Rapes are crimes of violence, anger, power, and revenge. TRUE<br>10. The culture of violence that we live in contributes to sexual violence. TRUE';
+				
 			});
 		});
 		$('#previous').click(function(){
@@ -367,6 +371,7 @@
 	<input type="button" id='showscore' value="Show Score" style= "display: block; margin: 0 auto;">
 	<input type="hidden" value="clear">
 	<p style="font-size=30px"id="score">
+	<p style="font-size:15px"id="answers">
 	</div>
 	<div id="wholenav">
     <ul>
