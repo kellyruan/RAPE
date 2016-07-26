@@ -8,7 +8,72 @@
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var correct = false;
+			document.getElementById("error").innerHTML = ""
+            $("#username").keyup(function(){
+                if (this.value == 'baymax') {
+                    document.getElementById("submit").href = "http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_homepage.html"; 
+					correct = true;
+					}
+                else if (this.value == 'ironman') {
+                    document.getElementById("submit").href = "http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/j_homepage.html"; 
+					correct = true;
+				}
+            });
+			$('#submit').click(function(){
+				if (correct = false) {	
+					document.getElementById("error").innerHTML = "Username or Password incorrect." 
+                }
+            });
+            $("#login").hover(function() {
+                $("#login-form").slideToggle();
+            });
+		});
+	</script>
         <style>
+			#login-form  {
+            margin-left: -180px;
+            position: absolute;
+            margin-top: -85px;
+            display: none;
+            float: left;
+            clear: both;
+            background-color: #666;
+            padding: 0 2% 2% 2%;
+            border-radius: 5px;
+            width:178px;
+            height:140px;
+      }
+
+      		#login-form  {
+            margin-left: -175px;
+            position: absolute;
+            margin-top: -85px;
+            display: none;
+            float: left;
+            clear: both;
+            background-color: #666;
+            padding: 0 2% 2% 2%;
+            border-radius: 5px;
+            width:178px;
+            height:145px;
+      }
+      #login-form .text {
+            width: 50%;
+            float: left;
+            margin-bottom: 2%;
+            margin-left: 2%;
+      }
+	  #login-form .submit {
+		width:50px;
+		height:15px;
+		font-size:14px;
+		padding:0px;
+		color:black;
+	  }
             body {
                 background-color: black;
                 padding: 10px;
@@ -41,11 +106,11 @@
 			margin-right: 50px;
 			width: 200px;
 			background-color: #f1f1f1;
-			height: 88%;
+			height: 620px;
 			position: fixed;
 			border: 3px groove #555;
 			right:0;
-			top:50px;
+			top:20px;
 			z-index: 2;
 		}
 		#wholenav li {
@@ -67,8 +132,8 @@
 		#wholenav ul li a {
 			display: block;
 			color: #000;
-			font-size: 20px;
-			padding: 23px;
+			font-size: 17px;
+			padding: 21px;
 			text-decoration: none;
 			text-align: center;
 		}
@@ -79,7 +144,7 @@
 		#wholenav ul ul {
 			z-index: 1;
 			visibility: hidden;
-			margin-left: -150px;
+			margin-left: -130px;
 			float:left;
         margin-top: -70px;
 			height: 0;
@@ -101,7 +166,7 @@
         background-color: white;
         position: fixed;
         bottom: 0;
-        width: 50%;
+        width: 450px;
     }
     #bottomnav ul li a {
         display: block;
@@ -124,7 +189,7 @@
     <body>
         
  <div class= "news_stories">
-            <a style="position:fixed; float:left; margin-left:10px; margin-top:-10px; margin-left:-610px" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/homepage.html"><img id="logo" src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="150px"/></a>
+            <a style="position:fixed; float:left; margin-top:-10px; margin-left:-650px" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/homepage.html"><img id="logo" src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="140px"/></a>
             <h1 style="margin-right:80px"><b> Sexual Assault at Scale</b></h1>
             <div id= "US">
                 <div class="container">
@@ -140,7 +205,8 @@
                     <div class="carousel-inner" role="listbox">
 
                       <div class="item active">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/pbKiOibGFkE" frameborder="0" allowfullscreen></iframe> <div class="carousel-caption">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/9PGPWp-4kvQ" frameborder="0" allowfullscreen></iframe>
+						<div style="margin-left:50px; opacity:0.7" class="carousel-caption">
                           <h3>Sexual Assault in the US Army</h3>
                           <p> Victims barely speak out, and when they do, they are retaliated against.</p>
                             <a target = "_blank" href="https://www.stanfordlawreview.org/online/sexual-assault-as-a-law-of-war-violation-u-s-service-members-duty-to-report/"> Sexual Assault as a Law of War Violation and U.S. Service Members’ Duty to Report </a>
@@ -172,6 +238,16 @@
         </div>
         <div id="wholenav">
     <ul>
+		<li id="login"><a  href="#" margin-right="40px">Log In/<br>Sign Up</a>
+                <form id="login-form" action="" method="post">
+                    <p style="width:300px; margin-top:15px; margin-left:5px;"><input class="text" id="username" type="text" name="username" placeholder="username" /></p>
+                    <p style="width:300px; margin-left:5px"><input class="text" id="password" type="password" name="password" placeholder="password" /></p><br><br>
+                    <button> <a type="button" class="submit" id="submit"> Log In </button> </a>
+					<a class="signup" style="color:white; padding:3px; font-size:13px; width:140px; height:7px; margin-top:-14px; margin-left:15px; background-color:#666" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/sign_up.html">Don't have an account yet? Click here to sign up.</a>
+					<p style="margin-top:25px; font-size:12px;" id="error"></p>
+				</form>
+					
+                </li>
          <li><a>Quiz</a>
 			<ul>
 				<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/quiz_facts.html">Facts</a></li>
@@ -203,10 +279,10 @@
                 <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/forums_specificcollege.html">Specific </br> College</a></li>
             </ul>
         </li>
-        <li><a>What You Can Do</a>
+        <li><a>Support</a>
             <ul>
                 <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/petition.html">Petition</a></li>
-                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/staysafe.html">Stay Safe</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/staysafe.html">What You <br> Can Do</a></li>
             </ul>
         </li>
         <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/aboutus.html">About Us</a></li>
