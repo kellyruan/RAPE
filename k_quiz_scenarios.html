@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Fjalla+One|Poiret+One|Poppins:500' rel='stylesheet' type='text/css'>
+	<title> RAPE: Quiz </title>
+        <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			
+			document.getElementById("questionNumber").innerHTML = "";
+			document.getElementById("clickstart").innerHTML = 'Click the "Start" button to take the test.';
+			document.getElementById("previous").style.visibility = "hidden";
+			document.getElementById("next").style.visibility = "hidden";
+			document.getElementById("showscore").style.visibility = "hidden";
+            document.getElementById("start").style.visibility = "visible";
+			answers = new Object();
+		$('.option').change(function(){
+			var answer = ($(this).attr('value'))
+			var question = ($(this).attr('name'))
+			answers[question] = answer
+		})
+		var item1 = document.getElementById('questions');
+		var totalQuestions = $('.questions').size();
+		var currentQuestion = 0;
+		$questions = $('.questions');
+		$questions.hide();
+		$($questions.get(currentQuestion)).fadeOut();
+        $('#start').click(function(){
+            $($questions.get(currentQuestion)).fadeIn();
+            document.getElementById("questionNumber").innerHTML = "Question 1/5";
+            document.getElementById("previous").style.visibility = "visible";
+			document.getElementById("next").style.visibility = "visible";
+            document.getElementById("start").style.visibility = "hidden";
+			document.getElementById("clickstart").innerHTML = '';
+        });
+		$('#next').click(function(){
+			$($questions.get(currentQuestion)).fadeOut(function(){
+				currentQuestion += 1;
+				questionNumber = currentQuestion + 1;
+				document.getElementById("questionNumber").innerHTML = "Question " + questionNumber + "/5";
+				if (currentQuestion == 4) {
+					document.getElementById("previous").style.visibility = "visible";
+					document.getElementById("next").style.visibility = "hidden";
+					document.getElementById("showscore").style.visibility = "visible";
+				}
+				if (currentQuestion == totalQuestions) {
+						document.getElementById("questionNumber").innerHTML = "";
+				}else{
+				$($questions.get(currentQuestion)).fadeIn();
+				}
+			});
+		});
+		$('#showscore').click(function(){
+			$($questions.get(currentQuestion)).fadeOut(function(){
+				document.getElementById("previous").style.visibility = "hidden";
+				document.getElementById("next").style.visibility = "hidden";
+				document.getElementById("showscore").style.visibility = "hidden";
+				document.getElementById("questionNumber").innerHTML = "";
+				document.getElementById("score").innerHTML = "Visit our page to learn more about what you can do to protect yourself.";
+			});
+		});
+		
+		$('#previous').click(function(){
+			$($questions.get(currentQuestion)).fadeOut(function(){
+				currentQuestion -= 1;
+				questionNumber = currentQuestion + 1;
+				document.getElementById("questionNumber").innerHTML = "Question " + questionNumber + "/5";
+				
+				if (currentQuestion == 3) {
+					
+					document.getElementById("previous").style.visibility = "visible";
+					document.getElementById("next").style.visibility = "visible";
+					document.getElementById("showscore").style.visibility = "hidden";
+				}
+				
+				$($questions.get(currentQuestion)).fadeIn();
+			});
+		});
+		});
+	</script>
+	<style>
+		#login-form  {
+            margin-left: -180px;
+            position: absolute;
+            margin-top: -85px;
+            display: none;
+            float: left;
+            clear: both;
+            background-color: #666;
+            padding: 0 2% 2% 2%;
+            border-radius: 5px;
+            width:178px;
+            height:140px;
+      }
+      		#login-form  {
+            margin-left: -175px;
+            position: absolute;
+            margin-top: -85px;
+            display: none;
+            float: left;
+            clear: both;
+            background-color: #666;
+            padding: 0 2% 2% 2%;
+            border-radius: 5px;
+            width:178px;
+            height:145px;
+      }
+      #login-form .text {
+            width: 50%;
+            float: left;
+            margin-bottom: 2%;
+            margin-left: 2%;
+      }
+	  #login-form .submit {
+		width:50px;
+		height:15px;
+		font-size:14px;
+		padding:0px;
+		color:black;
+	  }
+		.quiz {
+			text-align: center;
+		}
+		body {
+			padding: 10px;
+            		color: white;
+            		font-family: Fjalla One;
+			margin-bottom:50px;
+			background-image: url("https://s31.postimg.org/gb11bmbrf/background.png");
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+		}
+		.button {
+			color:white;
+			border:none; 
+			color:white; 
+			font-size: 20px; 
+			border-radius: 12px; 
+			background-color: #66CDAA;
+			width: 110px;
+			height:50px;
+			transition: 0s;
+			cursor: pointer;
+		}
+		.button span {
+			cursor: pointer;
+			display: inline-block;
+			vertical-align: middle;
+			position: relative;
+			transition: 0.5s;
+		}
+		.button span:after {
+			content: "  >>";
+			position: absolute;
+			vertical-align: middle;
+			opacity: 0;
+			top: 0;
+			right: -20px;
+			transition: 0.5s;
+		}
+		.button:hover span {
+			padding-right: 25px;
+		}
+		.button:hover span:after {
+			opacity: 1;
+			right: 0;
+		}
+		 #wholenav {
+                margin-right: 0px;
+                width: 200px;
+                height: 550px;
+                position: absolute;
+				margin-top: 2px;
+                margin-right: 20px;
+                right:0;
+                top:-20px;
+                z-index: 2;
+            }
+            #wholenav li {
+            z-index: -1;
+                margin-right: 20px;
+                list-style: none;
+                border-bottom: 2px solid black;
+            }
+            #wholenav li:last-child {
+                border-bottom: none;
+            }
+            #wholenav li a:hover {
+                background-color: black;
+                color: white;
+            }
+            #wholenav ul li a {
+                display: block;
+                color: white;
+                font-size: 20px;
+                padding: 23px;
+                text-decoration: none;
+                text-align: center;
+            }
+            #wholenav ul li:hover ul {
+                visibility:visible;
+                color: white;
+            }
+            #wholenav ul ul {
+                z-index: 1;
+                visibility: hidden;
+                margin-left: -150px;
+                float:left;
+            margin-top: -70px;
+                height: 0;
+                color: white;
+            background-color: black;
+            }
+            #wholenav ul ul a {
+                color: white;
+            background-color: black;
+            }
+            .active {
+                background-color: black;
+                color: white;
+            }
+        #bottomnav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            bottom: 0;
+            width: 50%;
+        }
+        #bottomnav ul li a {
+            display: block;
+            color: blue;
+			font-family: arial black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        #bottomnav li {
+                margin-left: 20px;
+                list-style: none;
+                border-right: 2px solid #555;
+            float: left;
+            }
+        #bottomnav li:last-child {
+                border-right: none;
+            }
+	</style>
+</head>
+<body>
+	<a style="position:fixed; float:left; margin-left:0px; margin-top:0px" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/homepage.html"><img id="logo" src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="150px" width="150"/></a>
+	
+	<body style= "background-color:#A07671;">
+	<font face="Fjalla One" color="white">
+	<style align: center;></style>
+	<div>
+		<h1 style="text-align:center; font-size="30px"> Do you know what to do? </h1>
+		<h3 style="text-align:center; font-size="15px"> Test your knowledge by choosing one of the options for each question. </h3>
+        <h3 id="clickstart" style="text-align:center; font=size="10px"><h3>
+        <h2 style="text-align:center; font-size="25px"> GOOD LUCK!<h2>
+	</div>
+	<p style="margin-left: 270px; font-size:20px" id="questionNumber">
+	<div style="text-align:center; font-size=30px">
+	<div class="questions">
+		<p><h4> 1. You are followed by three fit and muscular men. What do you do? <h4></p>
+		<form class="options">
+			<input class="option" type="radio" name="question1" value=4>Call the police.<br>
+			<input class="option" type="radio" name="question1" value=3>Go inside a building and hide.<br>
+			<input class="option" type="radio" name="question1" value=3>Keep walking because your destination is close.<br>
+			<input class="option" type="radio" name="question1" value=3>Run as fast as you can.<br>
+		</form>
+	</div>
+	<div class="questions">
+		<p><h4> 2. A man is trying to sexually assault you and corners you into a <br> empty alley way. Luckily you find an opening to run! What do you do? </p>
+		<form class="options">
+			<input class="option" type="radio" name="question2" value=4>Run for it.<br>
+			<input class="option" type="radio" name="question2" value=3>Scream for help and run.<br>
+            <input class="option" type="radio" name="question2" value=3>Try to kick him in the groin.<br>
+            <input class="option" type="radio" name="question2" value=3>Just stay there.<br>
+		</form>
+	</div>
+	<div class="questions">
+		<p><h4> 3. Somebody forces themselves into your home behind you. They are attempting <br> to assault you and you suddenly hear footsteps on the stairs <br> leading to the front door. What now?<h4></p>
+		<form class="options">
+			<input class="option" type="radio" name="question2" value=4> You scream in hopes that they hear you.<br>
+			<input class="option" type="radio" name="question2" value=3> Try to kick them in the groin.<br>
+            <input class="option" type="radio" name="question2" value=3> Just stay there.<br>
+            <input class="option" type="radio" name="question2" value=3> Beg the person to stop and hopes he does.<br>
+		</form>
+	</div>
+	<div class="questions">
+		<p><h4>4. You reach the door of your house but it is locked. The men start chasing <br> you. What do you do? <h4></p>
+		<form>
+			<input class="option" type="radio" name="question2" value=4> Unlock the door and run.<br>
+			<input class="option" type="radio" name="question2" value=3> Try to break the door down.<br>
+            <input class="option" type="radio" name="question2" value=3> Yell for help near the door.<br>
+            <input class="option" type="radio" name="question2" value=3> Turn around and let them take you.<br>
+		</form>
+	</div>
+	<div class="questions">
+		<p><h4> 5. You are being sexually assaulted and somebpdy hears you screaming. <br> The police arrives and arrests the assaulter. They ask you what happened. <br> What do you do? <h4></p>
+		<form>
+			<input class="option" type="radio" name="question2" value=4>Tell them what happened (with curse words).<br>
+			<input class="option" type="radio" name="question2" value=3>Just stare in space with great shock.<br>
+            <input class="option" type="radio" name="question2" value=3>Tell them what happened (without curse words).<br>
+            <input class="option" type="radio" name="question2" value=3>Calmly tell the officers what happened.<br>
+		</form>
+	</div>
+	
+    <button class="button" id='start'><span>Start  </span></button><br>
+	<button class="button" id='previous'><span>Previous  </span></button>
+	<button class="button" id='next'><span>Next  </span></button><br><br>
+	<button class="button" id='showscore'><span>Show Score  </span></button>
+	<input type="hidden" value="clear">
+	<a id="score" style="text-align:center" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/staysafe.html"></a>
+	</div>
+	<div id="wholenav">
+		<ul>
+		<li>
+			<a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/homepage.html"><span style="margin-left:-50px"> Welcome, baymax </span> <br><br> Log Out </a></li>
+		</li>
+		 <li><a>Quiz</a>
+		<ul>
+		  <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_quiz_facts.html">Facts</a></li>
+		  <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_quiz_scenarios.html">Scenarios</a></li>
+		</ul>
+		</li>
+			<li><a>Infographics/</br>Statistics</a>
+				<ul>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_info_general.html">General</a></li>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_info_colleges.html">Colleges</a></li>
+				</ul>
+			</li>
+			<li><a>Stories</a>
+				<ul>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_stories_all.html">All</a></li>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_stories_specificcollege.html">Your </br> College</a></li>
+				</ul>
+			</li>
+			<li><a href="#news">News</a>
+				<ul>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_news_global.html">Global</a></li>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_news_US.html">US</a></li>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_news_colleges.html">Colleges</a></li>
+				</ul>
+			</li>
+			<li><a>Forums</a>
+				<ul>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_forums_all.html">All</a></li>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_forums_specificcollege.html">Your </br> College</a></li>
+				</ul>
+			</li>
+        <li><a>Support</a>
+            <ul>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_petition.html">Petition</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_staysafe.html">What You <br> Can Do</a></li>
+            </ul>
+        </li>
+			<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_aboutus.html">About Us</a></li>
+		</ul>
+	</div>
+
+<div id="bottomnav">
+    <ul>
+        <li><a target="_blank" href="https://www.rainn.org/about-national-sexual-assault-telephone-hotline">Hotline: 800.656.HOPE (4673)</a></li>
+        <li><a target="_blank" href="https://hotline.rainn.org/online/terms-of-service.jsp">Chat Room: Click to chat online</a></li>
+    </ul>
+</div>
+</body>
+</html>
