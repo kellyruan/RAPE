@@ -31,6 +31,38 @@
             $("#login").hover(function() {
                 $("#login-form").slideToggle();
             });
+            focus();
+            var listener = addEventListener('blur', function() {
+                if(document.activeElement === document.getElementById('1')) {
+                    document.getElementById("caption1").style.visibility = "hidden"
+            }
+            });
+            var listener2 = addEventListener('blur', function() {
+                if(document.activeElement === document.getElementById('2')) {
+                    document.getElementById("caption2").style.visibility = "hidden"
+            }
+            });
+            var listener3 = addEventListener('blur', function() {
+                if(document.activeElement === document.getElementById('3')) {
+                    document.getElementById("caption3").style.visibility = "hidden"
+            }
+            });
+            var listener4 = addEventListener('blur', function() {
+                if(document.activeElement === document.getElementById('4')) {
+                    document.getElementById("caption4").style.visibility = "hidden"
+            }
+            });
+            var listener5 = addEventListener('blur', function() {
+                if(document.activeElement === document.getElementById('5')) {
+                    document.getElementById("caption5").style.visibility = "hidden"
+            }
+            });
+            removeEventListener(listener);
+            removeEventListener(listener2);
+            removeEventListener(listener3);
+            removeEventListener(listener4);
+            removeEventListener(listener5);
+            
 		});
 	</script>
         <style>
@@ -98,7 +130,6 @@
                 width: 55%;
                 background: rgba(0,0,0,1);
                 margin-left: 30px;
-				opacity:0.7;
             }
             .container{
                 background: black;
@@ -209,8 +240,8 @@
                     <div class="carousel-inner" role="listbox">
 
                       <div class="item active">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/m8TNujZqTDc" frameborder="0" allowfullscreen></iframe>
-                        <div class="carousel-caption">
+                        <iframe id="1" width="560" height="315" src="https://www.youtube.com/embed/m8TNujZqTDc" frameborder="0" allowfullscreen></iframe>
+                        <div id="caption1" class="carousel-caption">
                           <h3>Sexual Assault Victim Speaks Out</h3>
                           <p> A teenage girl, who was raped by 30 men, speaks out for the first time.</p>
                             <a target = "_blank" href="http://www.nytimes.com/video/world/americas/100000004444348/brazil-gang-rape-victim-speaks-out.htmlc"> New York Times Full Interview </a>
@@ -218,32 +249,32 @@
                       </div>
 
                     <div class="item">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/qiU9B4dlzKA" frameborder="0" allowfullscreen></iframe>
-                        <div class="carousel-caption">
+                        <iframe id="2" width="560" height="315" src="https://www.youtube.com/embed/qiU9B4dlzKA" frameborder="0" allowfullscreen></iframe>
+                        <div id="caption2" class="carousel-caption">
                           <h3>Fighting Rape - Brazil</h3>
                           <p>Roughly 420 women are raped every 72 hours in Brazil. One NGO, called Rio de Paz, organized a <br> campaign on Copacabana beach, protesting the culture of rape and violence against women in Brazil. </p>
                         </div>
                       </div>
                       
                       <div class="item">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/YY-LHg5dPD8" frameborder="0" allowfullscreen></iframe>
-                        <div class="carousel-caption">
+                        <iframe id="3" width="560" height="315" src="https://www.youtube.com/embed/YY-LHg5dPD8" frameborder="0" allowfullscreen></iframe>
+                        <div id="caption3" class="carousel-caption">
                           <h3>Children Sexually Abused Online in the Philippines</h3>
                           <p>Young children have been used online to perform sex shows. This young girl describes how she <br> was lured into the business by her neighbor. </p>
                         </div>
                       </div>
 
                       <div class="item">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/q3eXe7gcMU4" frameborder="0" allowfullscreen></iframe>
-                        <div class="carousel-caption">
+                        <iframe id="4" width="560" height="315" src="https://www.youtube.com/embed/q3eXe7gcMU4" frameborder="0" allowfullscreen></iframe>
+                        <div id="caption4" class="carousel-caption">
                           <h3>Syrian Refugees Fight Back</h3>
                           <p>These Syrian refugees are fighting against sexual assault in Germany after foreigners were <br> accused of attacking women in Cologne on New Year's Eve.</p>
                         </div>
                       </div>
 
                       <div class="item">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/OvembMwNwC8" frameborder="0" allowfullscreen></iframe>
-                        <div class="carousel-caption">
+                        <iframe id="5" width="560" height="315" src="https://www.youtube.com/embed/OvembMwNwC8" frameborder="0" allowfullscreen></iframe>
+                        <div id="caption5" class="carousel-caption">
                           <h3>Fighting Rape - India</h3>
                           <p>Young women of the Red Brigade are fighting back against sexual harassment. </p>
                         </div>
