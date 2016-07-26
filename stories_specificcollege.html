@@ -1,206 +1,242 @@
-
-<?php
-   include("config.php");
-   session_start();
-   
-   if($_SERVER["REQUEST_METHOD"] == "POST") {
-      // username and password sent from form 
-      
-      $myusername = mysqli_real_escape_string($db,$_POST['username']);
-      $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
-      
-      $sql = "SELECT id FROM admin WHERE username = '$myusername' and passcode = '$mypassword'";
-      $result = mysqli_query($db,$sql);
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      $active = $row['active'];
-      
-      $count = mysqli_num_rows($result);
-      
-      // If result matched $myusername and $mypassword, table row must be 1 row
-		
-      if($count == 1) {
-         session_register("myusername");
-         $_SESSION['login_user'] = $myusername;
-         
-         header("location: welcome.php");
-      }else {
-         $error = "Your Login Name or Password is invalid";
-      }
-   }
-?>
-
-
 <!DOCTYPE html>
+<html>
 <head>
-	<title> RAPE: Stories </title>
-	<style>
+<title> RAPE: Stories </title>
+<meta charset="utf-8"/>
+<style>
+		.thought {
+		  position:relative;
+		  padding:70px 30px;
+		  margin:1em auto 80px;
+		  border:10px solid	#1E90FF;
+		  text-align:center;
+		  color:#333;
+		  background:#fff;
+		  width:600px;
+		  border-radius:240px / 140px;
+		}
+		/* creates the larger circle */
+		.thought:before {
+		  content:"";
+		  position:absolute;
+		  z-index:10;
+		  bottom:-40px;
+		  left:100px;
+		  width:50px;
+		  height:50px;
+		  border:10px solid #1E90FF;
+		  background:#fff;
+		  -webkit-border-radius:50px;
+		  -moz-border-radius:50px;
+		  border-radius:50px;
+		  display:block;
+		}
+		/* creates the smaller circle */
+		.thought:after {
+		  content:"";
+		  position:absolute;
+		  z-index:10;
+		  bottom:-60px;
+		  left:50px;
+		  width:25px;
+		  height:25px;
+		  border:10px solid	#1E90FF;
+		  background:#fff;
+		  border-radius:25px;
+		  display:block;
+		}
+		.thought2 {
+		  position:relative;
+		  padding:70px 30px;
+		  margin:1em auto 80px;
+		  border:10px solid	#1E90FF;
+		  text-align:center;
+		  color:#333;
+		  background:#fff;
+		  width:600px;
+		  border-radius:240px / 140px;
+		}
+		/* creates the larger circle */
+		.thought2:before {
+		  content:"";
+		  position:absolute;
+		  z-index:10;
+		  bottom:-40px;
+		  right:100px;
+		  width:50px;
+		  height:50px;
+		  border:10px solid #1E90FF;
+		  background:#fff;
+		  -webkit-border-radius:50px;
+		  -moz-border-radius:50px;
+		  border-radius:50px;
+		  display:block;
+		}
+		/* creates the smaller circle */
+		.thought2:after {
+		  content:"";
+		  position:absolute;
+		  z-index:10;
+		  bottom:-60px;
+		  right:50px;
+		  width:25px;
+		  height:25px;
+		  border:10px solid	#1E90FF;
+		  background:#fff;
+		  border-radius:25px;
+		  display:block;
+		}
 		body {
 			padding: 10px;
-            font-family:Arial, Helvetica, sans-serif;
-            font-size:14px;
-			color:white;
-			background-color: black;
 		}
-        label {
-            font-weight:bold;
-            width:100px;
-            font-size:14px;
-         }
-         
-         .box {
-            border:#666666 solid 1px;
-         }
 		#wholenav {
-			margin-right: 50px;
-			width: 200px;
-			background-color: #f1f1f1;
-			height: 82%;
-			position: fixed;
-			border: 3px groove #555;
-			right:0;
-			top:50px;
-			z-index: 2;
+		  margin-right: 0px;
+		  width: 200px;
+		  background-image: url("https://s-media-cache-ak0.pinimg.com/564x/30/ce/a7/30cea7b5cb866f9379f37fb8acd5ac99.jpg")
+		  height: 550px;
+		  position: fixed;
+		  right:0;
+		  top:0px;
+		  z-index: 2;
 		}
 		#wholenav li {
-        z-index: -1;
-			margin-right: 20px;
-			list-style: none;
-			border-bottom: 2px solid #555;
+			z-index: -1;
+		  margin-right: 20px;
+		  list-style: none;
+		  border-bottom: 2px solid #555;
 		}
 		#wholenav li:last-child {
-			border-bottom: none;
+		  border-bottom: none;
 		}
 		#wholenav li a:hover {
-			background-color: #555;
-			color: white;
+		  background-color: #555;
+		  color: black;
 		}
 		#wholenav ul li a {
-			display: block;
-			color: #000;
-			font-size: 20px;
-			padding: 23px;
-			text-decoration: none;
-			text-align: center;
+		  display: block;
+		  color: black;
+		  font-size: 20px;
+		  padding: 23px;
+		  text-decoration: none;
+		  text-align: center;
 		}
 		#wholenav ul li:hover ul {
-			visibility:visible;
-			color: white;
+		  visibility:visible;
+		  color: black;
 		}
 		#wholenav ul ul {
-			z-index: 1;
-			visibility: hidden;
-			margin-left: -160px;
-			float:left;
-        margin-top: -70px;
-			height: 0;
-			color: white;
-        background-color: #555;
+		  z-index: 1;
+                visibility: hidden;
+                margin-left: -150px;
+                float:left;
+            margin-top: -70px;
+                height: 0;
+                color: white;
+            background-color: black;
 		}
 		#wholenav ul ul a {
-			color: white;
-        background-color: #555
+		  color: white;
+			background-color: #555
 		}
 		.active {
-			background-color: #4CAF50;
-			color: white;
+		  background-color: #4CAF50;
+		  color: white;
 		}
-    #bottomnav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        background-color: white;
-        position: fixed;
-        bottom: 0;
-        width: 50%;
-    }
-    #bottomnav ul li a {
-        display: block;
-        color: black;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-    #bottomnav li {
-			margin-left: 20px;
-			list-style: none;
-			border-right: 2px solid #555;
-        float: left;
+		#bottomnav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			background-color: white;
+			position: fixed;
+			bottom: 0;
+			width: 50%;
+
 		}
-    #bottomnav li:last-child {
-			border-right: none;
+		#bottomnav ul li a {
+			display: in-line;
+			color: black;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+		#bottomnav li {
+		  margin-left: 20px;
+		  list-style: none;
+		  border-right: 2px solid #555;
+			float: left;
+		}
+		#bottomnav li:last-child {
+		  border-right: none;
 		}
 	</style>
 </head>
-<body backgroundgcolor = "#FFFFFF">
-	<a style="position:fixed; float:left; margin-left:30px; margin-top:10px" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/homepage.html"><img id="logo" src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="170px"/></a>
-	</br></br></br></br></br></br></br></br></br></br></br></br></br></br>
-      <div align = "center">
-         <div style = "width:300px; border: solid 2px #ffb366; " align = "left">
-            <div style = "background-color: #ffb366; color:#FFFFFF; padding:3px;"><b>Login</b></div>
-				
-            <div style = "margin:30px">
-               
-				<form action = "" method = "post">
-                  <label>UserName  :</label><input type = "text" name = "username" class = "box"/><br /><br />
-                  <label>Password  :</label><input type = "password" name = "password" class = "box" /><br/><br />
-                  <button> <a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/homepage.html" type = "button" > Submit </button> </a>
-               </form>
-               
-               <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
-					
-            </div>
-				
-         </div>
-			
-      </div>
-    <div id="wholenav">
-    <ul>
-        <li><a>Quiz</a>
-			<ul>
-				<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/quiz_facts.html">Facts</a></li>
-				<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/quiz_scenarios.html">Scenarios</a></li>
-			</ul>
+<body>
+	<div>
+		<a style="position:fixed; float:left; margin-left:30px; margin-top:0px" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_homepage.html"><img id="logo" src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="170px"/></a>
+		<h1 style="text-align:center" > Stories: Stanford University </h1>
+	</div>
+	<div>
+		<p class="thought"><b>Survivor</b><br><br> I am a survivor of childhood sexual abuse and adult rape. My religious family's and my need for mental-health care clashed and this was detrimental to my healing process.  "Too many people suffer in silence, alienated by society's taboos, and are left to experience and search for healing with no guidelines or help."<br><br> -thor<br> </p>
+	</div>
+	<div>
+		<p class="thought2"><b>Survivor </b><br><br> I had always enjoyed spending time with my uncle, and would often look forward to sleepovers when we could have extended time together. On one of these occasions when I was 14, our normal activities turned abusive. I was confused by my uncle’s actions; nothing like this had happened before.  It wasn’t easy to recover from the abuse, but I found that talking about what happened to a supportive network of friends and family could help me heal.<br><br> -captain<br></p>
+	</div>
+	<div>
+		<p class="thought"><b>Survivor </b><br><br> My stepfather used to babysit me after school until my mother returned from work. It was on one of these afternoons, when I was just eight years old, that he first exposed himself to me. Over the next six years, the abuse escalated, and home became an unsafe environment.<br><br> -hulk </p>
+	</div>
+	<div>
+		<p class="thought2"><b>Survivor </b><br><br>When I was 14 years old, I was abducted, beaten and raped by a stranger in the woods in my hometown. I reported the assault to the police, and the perpetrator was arrested. I testified in front of a grand jury and the perpetrator was indicted—but the the man responsible never stood trial. Before the trial date, the perpetrator was beaten to death by unknown assailants. “The real healing was achieved when I started to sincerely believe I’m not responsible for what happened to me.” <br><br> -antman</p>
+	</div>
+	<div id="wholenav">
+		<ul>
+		<li>
+			<a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/homepage.html"><span style="margin-left:-100px"> Welcome, baymax </span> <br><br> Log Out </a></li>
 		</li>
-        <li><a>Infographics/</br>Statistics</a>
-            <ul>
-                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/info_general.html">General</a></li>
-                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/info_colleges.html">Colleges</a></li>
-            </ul>
-        </li>
-        <li><a>Stories</a>
-            <ul>
-                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/stories_all.html">All</a></li>
-                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/stories_specificcollege.html">Specific </br> College</a></li>
-            </ul>
-        </li>
-        <li><a href="#news">News</a>
-            <ul>
-                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/news_global.html">Global</a></li>
-                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/news_US.html">US</a></li>
-                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/news_colleges.html">Colleges</a></li>
-            </ul>
-        </li>
-        <li><a>Forums</a>
-            <ul>
-                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/forums_all.html">All</a></li>
-                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/forums_specificcollege.html">Specific </br> College</a></li>
-            </ul>
-        </li>
+		 <li><a>Quiz</a>
+		<ul>
+		  <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_quiz_facts.html">Facts</a></li>
+		  <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_quiz_scenarios.html">Scenarios</a></li>
+		</ul>
+		</li>
+			<li><a>Infographics/</br>Statistics</a>
+				<ul>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_info_general.html">General</a></li>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_info_colleges.html">Colleges</a></li>
+				</ul>
+			</li>
+			<li><a>Stories</a>
+				<ul>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_stories_all.html">All</a></li>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_stories_specificcollege.html">Your </br> College</a></li>
+				</ul>
+			</li>
+			<li><a href="#news">News</a>
+				<ul>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_news_global.html">Global</a></li>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_news_US.html">US</a></li>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_news_colleges.html">Colleges</a></li>
+				</ul>
+			</li>
+			<li><a>Forums</a>
+				<ul>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_forums_all.html">All</a></li>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_forums_specificcollege.html">Your </br> College</a></li>
+				</ul>
+			</li>
         <li><a>Support</a>
             <ul>
-                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/petition.html">Petition</a></li>
-                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/staysafe.html">What You Can Do/a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_petition.html">Petition</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_staysafe.html">What You <br> Can Do</a></li>
             </ul>
         </li>
-        <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/aboutus.html">About Us</a></li>
-    </ul>
-</div>
-<div id="bottomnav">
-    <ul>
-        <li><a target="_blank" href="https://www.rainn.org/about-national-sexual-assault-telephone-hotline">Hotline: 800.656.HOPE (4673)</a></li>
-        <li><a target="_blank" href="https://hotline.rainn.org/online/terms-of-service.jsp">Chat Room: Click to chat online</a></li>
-    </ul>
-</div>
-</div>
+			<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_aboutus.html">About Us</a></li>
+		</ul>
+	</div>
+	<div id="bottomnav">
+		<ul>
+			<li><a target="_blank" href="https://www.rainn.org/about-national-sexual-assault-telephone-hotline">Hotline: 800.656.HOPE (4673)</a></li>
+			<li><a target="_blank" href="https://hotline.rainn.org/online/terms-of-service.jsp">Chat Room: Click to chat online</a></li>
+		</ul>
+	</div>
 </body>
 </html>
