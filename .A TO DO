@@ -1,20 +1,17 @@
 http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/homepage.html
+logins: username: baymax, ironman(not yet made)
 
+locked pages:stories, forums
+sign up page
+news - all global videos unplayable
 info pages - tabs at top to jump to different sections of page
+shift login box to right
 news - hide captions when playing video
-about us - link email ? 
-*external nav bar (bootstrap?) % --> 550 px, what you can do -> support; bottom nav bar
-all pages - restyle, color, css
-quiz - no answer jumps to q 12
 
-themes light blue?
 
+% -->  px, vice versa
 external style sheet: logo, nav bars, bottom bar - minimizes when scroll down
+titles
+display message when username/password incorrect(need database)
 
-
-take back the night
-
-http://www.cssflow.com/snippets/login-form/demo/html
-
-
-news more links/all videos?
+the dream team 5
