@@ -30,14 +30,15 @@
 				color: white;
 				}
 			#pic_1{
-			margin-left: 300;
+			margin-left: 245px;
 			border-radius:20px
 			position:absolute;
 			left:50px;
 			border: 10px solid pink;
             }
             #pic_2{
-			margin-left: 30;
+			margin-left: 620px;
+			margin-top: -320px;
 			border-radius:20px
 			position:absolute;
 			left:50px;
@@ -45,7 +46,7 @@
             }
             #pic_3{
             margin-top: -90px;
-			margin-left: 300;
+			margin-left: 245px;
 			border-radius:20px
 			position:absolute;
 			left:50px;
@@ -53,14 +54,14 @@
             }
 			#pic_4{
 			margin-top: 15px;
-            margin-left:670;
+            margin-left:590px;
 			position:absolute;
 			left:50px;
 			border: 10px solid pink;
             }
 			
             #video_1{
-				margin-left: 150px;
+				margin-left: 100px;
                 text-align: center;
                 max-width: 1000px;
             }
@@ -71,11 +72,11 @@
             }
             body {
                 padding: 10px;
-		background-color: black;
-		background-image: url("https://s32.postimg.org/xe2r0amc5/homepagebackground.png");
-		background-size: 100% 100%;
-		background-repeat: no-repeat;
-		font-family: Fjalla One;
+				background-color: black;
+				background-image: url("https://s32.postimg.org/xe2r0amc5/homepagebackground.png");
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				font-family: Fjalla One;
             }
             #wholenav {
                 margin-right: 0px;
@@ -89,10 +90,10 @@
                 z-index: 2;
             }
             #wholenav li {
-            z-index: -1;
+            	z-index: -1;
                 margin-right: 20px;
                 list-style: none;
-                border-bottom: 2px solid black;
+                border-bottom: 2px solid white;
             }
             #wholenav li:last-child {
                 border-bottom: none;
@@ -157,10 +158,22 @@
                 border-right: none;
             }
 	</style>
-        
-</head3
+    <script>
+		function infoImg(pic,source) {
+                var infopic= document.getElementById(pic);
+                infopic.style.height = "500px";
+                infopic.src = source;
+                 
+            }
+            function iconImg(pic, source) {
+                var icon= document.getElementById(pic);
+                icon.style.height = "300px";
+                icon.src = source;
+            }
+	</script>   
+	</head>
 <body>
-    <a style="position:absolute; float:left; margin-left:-10px; margin-top:-10px; text-align:center" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/homepage.html"><img id="logo" src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="125" width="125"/></a>
+    <a style="position:absolute; float:left; margin-left:-10px; margin-top:-10px; text-align:center" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/homepage.html"><img id="logo" src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="175" width="200"/></a>
     
     
     <div class = "infographics">
@@ -197,6 +210,8 @@
 		<div id="video_1" class="quick">
             <h2> How well do college campuses handle sexual assault?</h2>
             <iframe width="600" height="355" src="https://www.youtube.com/embed/Z_E398OZQ88" frameborder="0" allowfullscreen></iframe>
+			<br/>
+			<br/>
         </div>
         <div id= "pic_1" class="row1">
             <img src ="https://s32.postimg.org/ckssypl11/colleges.png" align="top" height="300" width="350">
