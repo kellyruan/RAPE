@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Fjalla+One|Poiret+One|Poppins:500' rel='stylesheet' type='text/css'>
+    <title> RAPE: What You Can Do </title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="http://arrow.scrolltotop.com/arrow26.js"></script>
+	<script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			var correct = false;
+			document.getElementById("error").innerHTML = ""
+            $("#username").keyup(function(){
+                if (this.value == 'baymax') {
+                    document.getElementById("submit").href = "http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_homepage.html"; 
+					correct = true;
+					}
+                else if (this.value == 'ironman') {
+                    document.getElementById("submit").href = "http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/j_homepage.html"; 
+					correct = true;
+				}
+            });
+			$('#submit').click(function(){
+				if (correct = false) {	
+					document.getElementById("error").innerHTML = "Username or Password incorrect." 
+                }
+            });
+            $("#login").hover(function() {
+                $("#login-form").slideToggle();
+            });
+		});
+	</script>
+    <style>
+		#login-form  {
+            margin-left: -180px;
+            position: absolute;
+            margin-top: -85px;
+            display: none;
+            float: left;
+            clear: both;
+            background-color: #666;
+            padding: 0 2% 2% 2%;
+            border-radius: 5px;
+            width:178px;
+            height:140px;
+      }
+      		#login-form  {
+            margin-left: -175px;
+            position: absolute;
+            margin-top: -85px;
+            display: none;
+            float: left;
+            clear: both;
+            background-color: #666;
+            padding: 0 2% 2% 2%;
+            border-radius: 5px;
+            width:178px;
+            height:145px;
+      }
+      #login-form .text {
+            width: 50%;
+            float: left;
+            margin-bottom: 2%;
+            margin-left: 2%;
+      }
+	  #login-form .submit {
+		width:50px;
+		height:15px;
+		font-size:14px;
+		padding:0px;
+		color:black;
+	  }
+        body {
+            margin-bottom:100px;
+            font-family: Fjalla One;
+			color:white;
+			background-image: url(https://s-media-cache-ak0.pinimg.com/564x/30/ce/a7/30cea7b5cb866f9379f37fb8acd5ac99.jpg);
+        }
+        h2 {
+            text-align:center;
+		}
+		
+		#topper{
+			margin-top:10px;
+			margin-bottom: 20px;
+			padding: 20px;
+			background-color: black;
+			max-width: 400px;
+			text-align:center;
+			margin-left: 300px;
+			border-radius: 10px;
+			border:6px solid white;
+			border-style:double;
+		}
+		#homebutton{
+			padding: 20px;
+			margin-left: -30px;
+			margin-top: -30px;
+		}
+		.helping{
+			padding: 20px;
+			border: 2px solid;
+			margin-right: 250px;
+			margin-left:50px;
+			background-color: black;
+			margin-bottom: 10px;
+			border-radius: 10px;
+			
+		}
+		.stayingsafe{
+			border: 2px solid;
+			padding: 20px;
+			padding-left:70px;
+			padding-right:70px;
+			background-color: black;
+			margin-bottom: 10px;
+			border-radius: 10px;
+		}
+		.pledge{
+			padding: 20px;
+			border: 2px solid;
+			margin-right: 250px;
+			margin-left:50px;
+			background-color: black;
+			margin-bottom: 10px;
+			border-radius: 10px;
+		}
+		.survivors{
+			padding: 20px;
+			border: 2px solid;
+			margin-right: 250px;
+			margin-left:50px;
+			background-color: black;
+			margin-bottom: 10px;
+			border-radius: 10px;
+		}
+		.education{
+			padding: 20px;
+			border: 2px solid;
+			margin-right: 250px;
+			margin-left:50px;
+			background-color: black;
+			margin-bottom: 10px;
+			border-radius: 10px;
+		}
+		#prevention{
+			-webkit-column-count: 2; 
+    		-moz-column-count: 2;
+    		column-count: 2;
+		}
+		#attacked{
+			text-align: left;
+			margin-left: 200px;
+			margin-right: 200px;
+		}
+        #wholenav {
+			margin-right: 0px;
+			width: 200px;
+			background-color: transparent;
+			height: 550px;
+			position: absolute;
+			right:0;
+			top:-20px;
+			z-index: 2;
+		}
+		#wholenav li {
+			z-index: -1;
+			margin-right: 20px;
+			list-style: none;
+			border-bottom: 2px solid white;
+		}
+		#wholenav li:last-child {
+			border-bottom: none;
+		}
+		#wholenav li a:hover {
+			background-color: #555;
+			color: white;
+		}
+		#wholenav ul li a {
+			display: block;
+			color: white;
+			font-size: 20px;
+			padding: 23px;
+			text-decoration: none;
+			text-align: center;
+		}
+		#wholenav ul li:hover ul {
+			visibility:visible;
+			color: white;
+		}
+		#wholenav ul ul {
+			z-index: 1;
+			visibility: hidden;
+			margin-left: -150px;
+			float:left;
+			margin-top: -70px;
+			height: 0;
+			color: white;
+			background-color: transparent;
+		}
+		#wholenav ul ul a {
+			color: white;
+			background-color: #555
+		}
+		.active {
+			background-color: #4CAF50;
+			color: white;
+		}
+		#bottomnav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			background-color: white;
+			position: fixed;
+			bottom: 0;
+			width: 500px;
+		}
+		#bottomnav ul li a {
+			display: block;
+			color: black;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+		#bottomnav li {
+			margin-left: 20px;
+			list-style: none;
+			border-right: 2px solid #555;
+			float: left;
+		}
+		#bottomnav li:last-child {
+			border-right: none;
+		}
+    </style>
+</head>
+<body>
+	<div id="homebutton">
+		<a style="position:absolute; margin-top:10px; margin-left:10px" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/homepage.html"><img src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="150px"/></a>
+	</div>
+	<div id="topper">
+		<br>
+		<h1> What You Can Do </h1>
+	</div>
+	<div class="helping">
+		<h2>Providing Support</h2>
+		<h3>How to Help a Survivor</h3>
+		<ul>
+			<li> <h4>Believe in them.</h4><p>Being able to even share the experience takes a great deal of strength and courage. Let them know that you believe them. NEVER blame the survivor, it was not their fault.</p></li>
+			<li> <h4>Be respectful of privacy and confidentiality.</h4><p>Do not tell others about the assault without the survivors permission.</p></li>
+			<li> <h4>Provide information.</h4><p>Inform them about the possble resources that are available such as the hotline, counseling, medical assistance, preserving evidence, or reporting to the police.</p></li>
+			<li><h4>Be a good listener</h4><p>Recovering takes a ling time. Let the survivor choose what information they want to share. Remember to concentrate on their feelings, allow silences,let them know that you are glad that they disclosed to you, don't interrogate them, and don't ask tell them what they "should" have done.</p></li>
+            <img src = "https://s3.amazonaws.com/user-media.venngage.com/446608-0fb2d0b5b250851f8c85c968ae4ca5d6.jpg" height= "300px">
+		</ul>
+		<h3>Be Prepared to Listen</h3>
+		<ul>
+			<li><h4>Learn all you can about sexual assault</h4><p>Familiarize yourself with all your resources. This will help with knowing other survivor's experiences and the pathway to recovery.</p></li>
+			<li><h4>Be aware of your own reactions to sexual assault.</h4><p>You may feel confusion, anger, or a sense of violation, but you cannot make the sexual assault go away. The best way to offer them support in whatever decision they choose </p></li>
+			<li><h4>Realize that what you and the survivor wants may be different.</h4><p>Ask the survivor what they may need assiantance with. Do not do anything based on your feelings, such as beating up the assailant.</p></li>
+			<li><h4>Know your limitations</h4><p>No one has superpowers. Provide as much as you can and let the survivor know that it's okay to talk to others if they need more help.</p></li>
+			<li><h4>Seek support for yourself.</h4><p>Make sure that you have control of your own feelings so that you are able to help the survivor to the best of their ability.</p></li>
+		</ul>
+	</div>
+    <div class= "pledge">
+        <h3>You can sign our petition.</h3>
+        <a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/petition.html"> The Petition</a>
+    </div>
+    <div class="survivors">
+        <h3>What to do after the Assault- for Survivors</h3>
+        <ul>
+            <li><h4>Remember that the incident was not your fault.</h4><p>Something happened to you that you didn’t want to happen—and that’s not OK.</p></li>
+            <li><h4>Know that you are not the only one.</h4><p> Find support, whether it be in your friends, other survivors, mediccal assistance, or in counseling.</p> </li>
+            <li><h4>Have evidence.</h4><p>This is an important step if you want to report your experience to the police or bring it to a court of law.</p></li>
+        </ul>
+        <a target ="_blank" href = "https://www.rainn.org/articles/steps-you-can-take-after-sexual-assault">Getting more help</a>
+    </div>
+	<div class="education">
+		<h2>Sex Ed</h2>
+		<h3>Visit the general information page to review information about consent, sexual assault, and the abstinence culture.</h3>
+		<br/>
+		<a target= "_blank" href= "http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/info_general.html">Go to the general information page.</a>
+		<h3>Remember that silence is not consent!</h3>
+	</div>
+    <div class= "stayingsafe">
+		<h2>Staying Safe in Certain Situations</h2>
+		<div id="prevention">
+			<h3> Staying Safe in Social Situations: </h3>
+			<p> 1. Be aware of your surroundings at all times. </p>
+			<p> 2. Drink responsibly. </p>
+			<p> 3. Don't leave your drinks unattended. </p>
+			<p> 4. Stick with your friends. </p>
+			<p> 5. Stay safe at clubs and bars. </p>
+			<p> 6. Be assertive. </p>
+			<p> 7. Keep personal information private. </p>
+			<p> 8. Always keep your phone charged. </p>
+			<br><br><br/>
+			<h3> Staying Safe When You're Alone: </h3>
+			<p> 1. Be aware of your surroundings at all times. </p>
+			<p> 2. Be careful about using technology when you're out alone. </p>
+			<p> 3. Trust your natural instincts. </p>
+			<p> 4. Carry defensive items if you know how to safely use them. </p>
+			<p> 5. Walk to your destination with confidence. </p>
+			<p> 6. Make eye contact if you are being followed by someone who may be a potential threat. </p>
+			<p> 7. Keep in mind that rapists do not necessarily look any different than normal people. </p>
+			<p> 8. Don't underestimate your abilities and improvisation skills. </p>
+		</div>
+		<div id= "attacked">
+			<h3> What to do if You're Attacked: </h3>
+			<p> 1. Utilize self defense and "SING" (Solar Plexus-Instep-Nose-Groin), the 4 points of attack. </p>
+			<p> 2. Yell, shout, and draw attention to yourself. </p>
+			<p> 3. Notice and leave identifying marks on the attacker. </p>
+			<p> 4. Remember that you have full rights to defend yourself in every way. </p>
+		</div>
+	</div>
+    <br><br>
+    <h4> Tired of reading? Watch a recap of the information here: </h4>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dRuPFmo15Tk" frameborder="0" allowfullscreen></iframe>
+	<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FSOML%2Fvideos%2F911138162363932%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+
+	
+<div id="wholenav">
+		<ul>
+		<li>
+			<a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/homepage.html"><span style="margin-left:-50px"> Welcome, baymax </span> <br><br> Log Out </a></li>
+		</li>
+		 <li><a>Quiz</a>
+		<ul>
+		  <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_quiz_facts.html">Facts</a></li>
+		  <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_quiz_scenarios.html">Scenarios</a></li>
+		</ul>
+		</li>
+			<li><a>Infographics/</br>Statistics</a>
+				<ul>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_info_general.html">General</a></li>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_info_colleges.html">Colleges</a></li>
+				</ul>
+			</li>
+			<li><a>Stories</a>
+				<ul>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_stories_all.html">All</a></li>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_stories_specificcollege.html">Your </br> College</a></li>
+				</ul>
+			</li>
+			<li><a href="#news">News</a>
+				<ul>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_news_global.html">Global</a></li>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_news_US.html">US</a></li>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_news_colleges.html">Colleges</a></li>
+				</ul>
+			</li>
+			<li><a>Forums</a>
+				<ul>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_forums_all.html">All</a></li>
+					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_forums_specificcollege.html">Your </br> College</a></li>
+				</ul>
+			</li>
+        <li><a>Support</a>
+            <ul>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_petition.html">Petition</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_staysafe.html">What You <br> Can Do</a></li>
+            </ul>
+        </li>
+			<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_aboutus.html">About Us</a></li>
+		</ul>
+	</div>
+<div id="bottomnav">
+    <ul>
+        <li><a target="_blank" href="https://www.rainn.org/about-national-sexual-assault-telephone-hotline">Hotline: 800.656.HOPE (4673)</a></li>
+        <li><a target="_blank" href="https://hotline.rainn.org/online/terms-of-service.jsp">Chat Room: Click to chat online</a></li>
+    </ul>
+</div>
+</body>
+</html>
