@@ -31,6 +31,19 @@
             $("#login").hover(function() {
                 $("#login-form").slideToggle();
             });
+            focus();
+            var listener = addEventListener('blur', function() {
+                if(document.activeElement === document.getElementById('1')) {
+                    document.getElementById("caption1").style.visibility = "hidden"
+            }
+            });
+            var listener2 = addEventListener('blur', function() {
+                if(document.activeElement === document.getElementById('2')) {
+                    document.getElementById("caption2").style.visibility = "hidden"
+            }
+            });
+            removeEventListener(listener);
+            removeEventListener(listener2);
 		});
 	</script>
         <style>
@@ -219,8 +232,8 @@
                       </div>
 
                       <div class="item">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/V-heh-48dJE" frameborder="0" allowfullscreen></iframe>
-						<div style="opacity:0.7; margin-left:30px" class="carousel-caption">
+                        <iframe id="1" width="560" height="315" src="https://www.youtube.com/embed/V-heh-48dJE" frameborder="0" allowfullscreen></iframe>
+						<div id="caption1" style="margin-left:30px" class="carousel-caption">
                           <h3>Stanford Rapist - 2016</h3>
                           <p>Video link above includes the victim's letter to her attacker. The attacker is sentenced to only <br> 6 months in prison and will not be allowed to swim for USA Swimming. </p>
                             <a target ="_blank" href="https://www.youtube.com/watch?v=MmYCD4RxrQE">Pastor's Response to Brock Turner</a>
@@ -230,8 +243,8 @@
                       </div>
 
                       <div class="item">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Lr2-pDkewSk" frameborder="0" allowfullscreen></iframe>
-						<div style="opacity:0.7; margin-left:30px" class="carousel-caption">
+                        <iframe id="2" width="560" height="315" src="https://www.youtube.com/embed/Lr2-pDkewSk" frameborder="0" allowfullscreen></iframe>
+						<div id="caption2" style="margin-left:30px" class="carousel-caption">
                           <h3>Delta Kappa Epsilon @ Yale</h3>
                           <p>A Fraternity was banned for 5 years for chanting "No means yes, yes means anal."</p>
                             <a target="_blank" href= "http://bigthink.com/focal-point/no-means-yes-yes-means-anal-frat-banned-from-yale">Frat Ban article</a>
