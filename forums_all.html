@@ -1,160 +1,174 @@
-<?php
-   include("config.php");
-   session_start();
-   
-   if($_SERVER["REQUEST_METHOD"] == "POST") {
-      // username and password sent from form 
-      
-      $myusername = mysqli_real_escape_string($db,$_POST['username']);
-      $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
-      
-      $sql = "SELECT id FROM admin WHERE username = '$myusername' and passcode = '$mypassword'";
-      $result = mysqli_query($db,$sql);
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      $active = $row['active'];
-      
-      $count = mysqli_num_rows($result);
-      
-      // If result matched $myusername and $mypassword, table row must be 1 row
-		
-      if($count == 1) {
-         session_register("myusername");
-         $_SESSION['login_user'] = $myusername;
-         
-         header("location: welcome.php");
-      }else {
-         $error = "Your Login Name or Password is invalid";
-      }
-   }
-?>
-
-
 <!DOCTYPE html>
 <head>
+	<link href='https://fonts.googleapis.com/css?family=Fjalla+One|Poiret+One|Poppins:500' rel='stylesheet' type='text/css'>
 	<title> RAPE: Forums </title>
+        <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			var correct = false;
+			document.getElementById("error").innerHTML = ""
+            $("#username").keyup(function(){
+                if (this.value == 'baymax') {
+                    document.getElementById("submit").href = "http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_homepage.html"; 
+					correct = true;
+					}
+                else if (this.value == 'ironman') {
+                    document.getElementById("submit").href = "http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/j_homepage.html"; 
+					correct = true;
+				}
+            });
+			$('#submit').click(function(){
+				if (correct = false) {	
+					document.getElementById("error").innerHTML = "Username or Password incorrect." 
+                }
+            });
+            $("#login").hover(function() {
+                $("#login-form").slideToggle();
+            });
+		
+		});
+	</script>
 	<style>
-		body {
-			padding: 10px;
-            font-family:Arial, Helvetica, sans-serif;
-            font-size:14px;
-			color: white;
-			background-color: black;
-		}
-        label {
-            font-weight:bold;
-            width:100px;
-            font-size:14px;
-         }
-         
-         .box {
-            border:#666666 solid 1px;
-		 }
-		#wholenav {
-			margin-right: 50px;
-			width: 200px;
-			background-color: #000;
-			height: 82%;
-			position: fixed;
-			right:0;
-			top:50px;
-			z-index: 2;
-		}
-		#wholenav li {
-        z-index: -1;
-			margin-right: 20px;
-			list-style: none;
-			border-bottom: 2px solid #555;
-		}
-		#wholenav li:last-child {
-			border-bottom: none;
-		}
-		<!-- nav add on box -->
-		#wholenav li a:hover {
-			background-color: black;
-			color: white;
-		}
-		#wholenav ul li a {
-			display: block;
-			color: white;
-			font-size: 20px;
-			padding: 23px;
-			text-decoration: none;
-			text-align: center;
-		}
-		#wholenav ul li:hover ul {
-			visibility:visible;
-			color: white;
-		}
-		#wholenav ul ul {
-			z-index: 1;
-			visibility: hidden;
-			margin-left: -160px;
-			float:left;
-        margin-top: -70px;
-			height: 0;
-			color: white;
-        background-color: #555;
-		}
-		<!-- nav add on  -->
-		#wholenav ul ul a {
-			color: white;
-        background-color: black;
-		}
-		.active {
-			background-color: #4CAF50
-			color: white;
-		}
-    #bottomnav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        background-color: white;
-        position: fixed;
-        bottom: 0;
-        width: 50%;
-    }
-    #bottomnav ul li a {
-        display: block;
-        color: black;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-    #bottomnav li {
-			margin-left: 20px;
-			list-style: none;
-			border-right: 2px solid #555;
-        float: left;
-		}
-    #bottomnav li:last-child {
-			border-right: none;
-		}
+		#login-form  {
+            margin-left: -180px;
+            position: absolute;
+            margin-top: -85px;
+            display: none;
+            float: left;
+            clear: both;
+            background-color: #666;
+            padding: 0 2% 2% 2%;
+            border-radius: 5px;
+            width:178px;
+            height:140px;
+      }
+      		#login-form  {
+            margin-left: -175px;
+            position: absolute;
+            margin-top: -85px;
+            display: none;
+            float: left;
+            clear: both;
+            background-color: #666;
+            padding: 0 2% 2% 2%;
+            border-radius: 5px;
+            width:178px;
+            height:145px;
+      }
+      #login-form .text {
+            width: 50%;
+            float: left;
+            margin-bottom: 2%;
+            margin-left: 2%;
+      }
+	  #login-form .submit {
+		width:50px;
+		height:15px;
+		font-size:14px;
+		padding:0px;
+		color:black;
+	  }
+		  #wholenav {
+                margin-right: 0px;
+                width: 200px;
+                height: 550px;
+                position: absolute;
+				margin-top: 2px;
+                margin-right: 20px;
+                right:0;
+                top:0px;
+                z-index: 2;
+            }
+            #wholenav li {
+            z-index: -1;
+                margin-right: 20px;
+                list-style: none;
+                border-bottom: 2px solid #555;
+            }
+            #wholenav li:last-child {
+                border-bottom: none;
+            }
+            #wholenav li a:hover {
+                background-color: black;
+                color: white;
+            }
+            #wholenav ul li a {
+                display: block;
+                color: white;
+                font-size: 20px;
+                padding: 23px;
+                text-decoration: none;
+                text-align: center;
+            }
+            #wholenav ul li:hover ul {
+                visibility:visible;
+                color: white;
+            }
+            #wholenav ul ul {
+                z-index: 1;
+                visibility: hidden;
+                margin-left: -150px;
+                float:left;
+            margin-top: -70px;
+                height: 0;
+                color: white;
+            background-color: black;
+            }
+            #wholenav ul ul a {
+                color: white;
+            background-color: black;
+            }
+            .active {
+                background-color: black;
+                color: white;
+            }
+        #bottomnav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            bottom: 0;
+            width: 50%;
+        }
+        #bottomnav ul li a {
+            display: block;
+            color: blue;
+			font-family: arial black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        #bottomnav li {
+                margin-left: 20px;
+                list-style: none;
+                border-right: 2px solid #555;
+            float: left;
+            }
+        #bottomnav li:last-child {
+                border-right: none;
+            }
+      
 	</style>
 </head>
-<body backgroundgcolor = "#FFFFFF">
-	<a style="position:fixed; float:left; margin-left:30px; margin-top:10px" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/homepage.html"><img id="logo" src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="170px"/></a>
-	</br></br></br></br></br></br></br></br></br></br></br></br></br></br>
-      <div align = "center">
-         <div style = "width:300px; border: solid 2px #ffb366; " align = "left">
-            <div style = "background-color: #ffb366; color:#FFFFFF; padding:3px;"><b>Login</b></div>
-				
-            <div style = "margin:30px">
-               
-				<form action = "" method = "post">
-                  <label>UserName  :</label><input type = "text" name = "username" class = "box"/><br /><br />
-                  <label>Password  :</label><input type = "password" name = "password" class = "box" /><br/><br />
-                  <button> <a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_homepage.html" type = "button" > Submit </button> </a>
-               </form>
-               
-               <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
-					
-            </div>
-				
-         </div>
-			
-      </div>
-    <div id="wholenav">
+<body>
+	<a style="position:absolute; float:left; margin-left:0px; margin-top:-60px," href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/homepage.html"><img src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="150px"/></a>
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+	<h1> LOCKED </h1>
+	<br><br>
+	<h2>Sign up or log in to access the content on this page.</h2>
+	<h3>(picture of lock)</h3>
+	<div id="wholenav">
     <ul>
+		<li id="login"><a  href="#" margin-right="40px">Log In/<br>Sign Up</a>
+                <form id="login-form" action="" method="post">
+                    <p style="width:300px; margin-top:15px; margin-left:5px;"><input class="text" id="username" type="text" name="username" placeholder="username" /></p>
+                    <p style="width:300px; margin-left:5px"><input class="text" id="password" type="password" name="password" placeholder="password" /></p><br><br>
+                    <button> <a type="button" class="submit" id="submit"> Log In </button> </a>
+					<a class="signup" style="color:white; padding:3px; font-size:13px; width:140px; height:7px; margin-top:-14px; margin-left:15px; background-color:#666" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/sign_up.html">Don't have an account yet? Click here to sign up.</a>
+					<p style="margin-top:25px; font-size:12px;" id="error"></p>
+				</form>
+					
+                </li>
         <li><a>Quiz</a>
 			<ul>
 				<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/quiz_facts.html">Facts</a></li>
@@ -189,7 +203,7 @@
         <li><a>Support</a>
             <ul>
                 <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/petition.html">Petition</a></li>
-                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/staysafe.html">What You Can Do</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/staysafe.html">What You <br> Can Do</a></li>
             </ul>
         </li>
         <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/aboutus.html">About Us</a></li>
