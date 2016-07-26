@@ -5,9 +5,74 @@
 	<title> RAPE: What You Can Do </title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script type="text/javascript" src="http://arrow.scrolltotop.com/arrow26.js"></script>
+	<script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var correct = false;
+			document.getElementById("error").innerHTML = ""
+            $("#username").keyup(function(){
+                if (this.value == 'baymax') {
+                    document.getElementById("submit").href = "http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_homepage.html"; 
+					correct = true;
+					}
+                else if (this.value == 'ironman') {
+                    document.getElementById("submit").href = "http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/j_homepage.html"; 
+					correct = true;
+				}
+            });
+			$('#submit').click(function(){
+				if (correct = false) {	
+					document.getElementById("error").innerHTML = "Username or Password incorrect." 
+                }
+            });
+            $("#login").hover(function() {
+                $("#login-form").slideToggle();
+            });
+		});
+	</script>
     
 <body style= "background-color: #FFFD7B;">
 <style>
+	#login-form  {
+            margin-left: -180px;
+            position: absolute;
+            margin-top: -85px;
+            display: none;
+            float: left;
+            clear: both;
+            background-color: #666;
+            padding: 0 2% 2% 2%;
+            border-radius: 5px;
+            width:178px;
+            height:140px;
+      }
+
+      		#login-form  {
+            margin-left: -175px;
+            position: absolute;
+            margin-top: -85px;
+            display: none;
+            float: left;
+            clear: both;
+            background-color: #666;
+            padding: 0 2% 2% 2%;
+            border-radius: 5px;
+            width:178px;
+            height:145px;
+      }
+      #login-form .text {
+            width: 50%;
+            float: left;
+            margin-bottom: 2%;
+            margin-left: 2%;
+      }
+	  #login-form .submit {
+		width:50px;
+		height:15px;
+		font-size:14px;
+		padding:0px;
+		color:black;
+	  }
 	body{
 		font-family: Fjalla One;
 		background-image: url(https://s-media-cache-ak0.pinimg.com/564x/30/ce/a7/30cea7b5cb866f9379f37fb8acd5ac99.jpg);
@@ -32,18 +97,18 @@
 		text-align: center;
 	}
 	#wholenav {
-			margin-right: 0px;
-			width: 200px;
-			background-color: #f1f1f1;
-			height: 600px;
-			position: absolute;
-			border: 3px groove #555;
-			right:0;
-			top:-10px;
-			z-index: 2;
+		margin-right: 8px;
+		width: 200px;
+		background-color: #f1f1f1;
+		height: 620px;
+		position: fixed;
+		border: 3px groove #555;
+		right:0;
+		top:10px;
+		z-index: 2;
 		}
-		#wholenav li {
-			z-index: -1;
+	#wholenav li {
+			 z-index: -1;
 			margin-right: 20px;
 			list-style: none;
 			border-bottom: 2px solid #555;
@@ -58,8 +123,8 @@
 		#wholenav ul li a {
 			display: block;
 			color: #000;
-			font-size: 20px;
-			padding: 23px;
+			font-size: 19px;
+			padding: 21px;
 			text-decoration: none;
 			text-align: center;
 		}
@@ -70,7 +135,7 @@
 		#wholenav ul ul {
 			z-index: 1;
 			visibility: hidden;
-			margin-left: -150px;
+			margin-left: -130px;
 			float:left;
 			margin-top: -70px;
 			height: 0;
@@ -113,9 +178,9 @@
 </style>
 </head>
 <body>
-    <a style="position:absolute; float:left; margin-left:-10px; margin-top:-20px" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/homepage.html"><img src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="150px"/></a>
+    <a style="position:absolute; float:left; margin-left:0px; margin-top:-10px" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/homepage.html"><img src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="150px"/></a>
 
-    <h1> Sign our petition.</h1> <br>
+    <h1 style="padding:5px"> Sign our petition.</h1> <br>
         <div style="text-align:center;"><IMG SRC="http://porta-grazer.com/wp-content/uploads/2014/05/red-arrow-animated-with-transparent-background.gif" ALT="image" width="250" height="250"></div>
     <h3><a target="_blank" href=https://www.change.org/p/college-and-campus-rape-can-t-be-ignored?recruiter=576863465&utm_source=petitions_show_components_action_panel_wrapper&utm_medium=copylink><h3><p style="text-align:center">Click Here!</a>
 	<div class="description">
@@ -125,6 +190,16 @@
 	</div>
 	<div id="wholenav">
     <ul>
+		<li id="login"><a  href="#" margin-right="40px">Log In/<br>Sign Up</a>
+                <form id="login-form" action="" method="post">
+                    <p style="width:300px; margin-top:15px; margin-left:5px;"><input class="text" id="username" type="text" name="username" placeholder="username" /></p>
+                    <p style="width:300px; margin-left:5px"><input class="text" id="password" type="password" name="password" placeholder="password" /></p><br><br>
+                    <button> <a type="button" class="submit" id="submit"> Log In </button> </a>
+					<a class="signup" style="color:white; padding:3px; font-size:13px; width:140px; height:7px; margin-top:-14px; margin-left:15px; background-color:#666" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/sign_up.html">Don't have an account yet? Click here to sign up.</a>
+					<p style="margin-top:25px; font-size:12px;" id="error"></p>
+				</form>
+					
+                </li>
         <li><a>Quiz</a>
 			<ul>
 				<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/quiz_facts.html">Facts</a></li>
@@ -156,10 +231,10 @@
                 <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/forums_specificcollege.html">Specific </br> College</a></li>
             </ul>
         </li>
-		<li><a>What You Can Do</a>
+		<li><a>Support</a>
             <ul>
                 <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/petition.html">Petition</a></li>
-                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/staysafe.html">Stay Safe</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/staysafe.html">What You <br> Can Do</a></li>
             </ul>
         </li>
         <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/aboutus.html">About Us</a></li>
