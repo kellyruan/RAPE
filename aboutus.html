@@ -4,9 +4,63 @@
 	<title> RAPE: About Us </title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script type="text/javascript" src="http://arrow.scrolltotop.com/arrow26.js"></script>
-    <style>
+    <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var correct = false;
+			document.getElementById("error").innerHTML = ""
+            $("#username").keyup(function(){
+                if (this.value == 'baymax') {
+                    document.getElementById("submit").href = "http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_homepage.html"; 
+					correct = true;
+					}
+                else if (this.value == 'ironman') {
+                    document.getElementById("submit").href = "http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/j_homepage.html"; 
+					correct = true;
+				}
+            });
+			$('#submit').click(function(){
+				if (correct = false) {	
+					document.getElementById("error").innerHTML = "Username or Password incorrect." 
+                }
+            });
+            $("#login").hover(function() {
+                $("#login-form").slideToggle();
+            });
+		});
+	</script>
+	
+	<style>
+		#login-form  {
+            margin-left: -180px;
+            position: absolute;
+            margin-top: -85px;
+            display: none;
+            float: left;
+            clear: both;
+            background-color: #666;
+            padding: 0 2% 2% 2%;
+            border-radius: 5px;
+            width:178px;
+            height:140px;
+      }
+
+      #login-form .text {
+            width: 50%;
+            float: left;
+            margin-bottom: 2%;
+            margin-left: 2%;
+      }
+
+	  #login-form .submit {
+		width:50px;
+		height:15px;
+		font-size:14px;
+		padding:0px;
+		color:black;
+	  }
         .topper {
-			max-width: 780px;
+			max-width: 765px;
             margin-left: 180px;
 			background-image: url("http://2paragraphs.com/wp-content/uploads/2016/03/cardi-b-on-reunion.jpg");
             background-size: 1400px 500px;
@@ -51,7 +105,7 @@
 			padding-right: 75px;
 			margin-left: 100px;
 			margin-right: 100px;
-			margin-top:40px;
+			margin-top:77px;
 		}
 		.people {
 			padding: 50px;
@@ -64,12 +118,11 @@
 		}
  	   #wholenav {
                 margin-right: -10px;
-				margin-top: -10px;
                 width: 200px;
                 background-color: black;
                 height: 560px;
                 position: absolute;
-				margin-top: 20px;
+				margin-top: -10px;
                 margin-right: 20px;
                 right:0;
                 top:0px;
@@ -163,19 +216,29 @@
         <p>hey</p>
    
         <h3>Kelly Ruan</h3>
-        <p>I'm a rising junior attending high school in San Francisco. With a passion for computer science, I hope to make a difference in someone's life <br> someday through the power of coding. In addition to computer programming, I also enjoy walks along the beach and hikes through parks.</p>
+        <p>I'm a rising junior attending high school in San Francisco. With a passion for computer science, I hope to make a difference in someone's life <br> someday through the power of coding. In my free time, I enjoy walks along the beach and hikes through parks.</p>
    
         <h3>Zayn Muchell</h3>
         <p>hey</p>
    
         <h3>Jocelyn Chu</h3>
-        <p>I'm a rising senior and aspiring dermatologist. Through the Girls Who Code program, I have also found my love for coding as well. During my free time, I love to dance, golf, and fence.</p>
+        <p>I'm a rising senior and an aspiring dermatologist. Through the Girls Who Code program, I have found my love for coding as well. During my free <br> time, I love to dance, golf, and fence.</p>
 	  </div>
     <p style="font-size:35px"> Questions/Comments? Contact us at rapexperiences@gmail.com </p> <a href="rapexperiences@gmail.com"></a>
 	
 	<div id="wholenav">
     <ul>
-        <li><a>Quiz</a>
+        <li id="login"><a  href="#" margin-right="40px">Log In/<br>Sign Up</a>
+                <form id="login-form" action="" method="post">
+                    <p style="width:300px; margin-top:15px; margin-left:5px;"><input class="text" id="username" type="text" name="username" placeholder="username" /></p>
+                    <p style="width:300px; margin-left:5px"><input class="text" id="password" type="password" name="password" placeholder="password" /></p><br><br>
+                    <button> <a type="button" class="submit" id="submit"> Log In </button> </a>
+					<a class="signup" style="padding:3px; font-size:13px; width:140px; height:7px; margin-top:-14px; margin-left:15px; background-color:#666" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/sign_up.html">Don't have an account yet? Click here to sign up.</a>
+					<p style="margin-top:25px; font-size:12px;" id="error"></p>
+				</form>
+					
+                </li>
+		<li><a>Quiz</a>
 			<ul>
 				<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/quiz_facts.html">Facts</a></li>
 				<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/quiz_scenarios.html">Scenarios</a></li>
