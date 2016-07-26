@@ -4,9 +4,9 @@
 <meta charset="utf-8"/>
 <html>
     <head>
-    		<link href='https://fonts.googleapis.com/css?family=Fjalla+One|Poiret+One|Poppins:500' rel='stylesheet' type='text/css'>
+    	<link href='https://fonts.googleapis.com/css?family=Fjalla+One|Poiret+One|Poppins:500' rel='stylesheet' type='text/css'>
 		<title> RAPE: Infographics/Statistics </title>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script type="text/javascript" src="http://arrow.scrolltotop.com/arrow26.js"></script>
 		<script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
 	<script type="text/javascript">
@@ -33,7 +33,8 @@
             });
 		});
 	</script>
-        <style>
+    
+	<style>
 			#login-form  {
             margin-left: -180px;
             position: absolute;
@@ -47,14 +48,12 @@
             width:178px;
             height:140px;
       }
-
       #login-form .text {
             width: 50%;
             float: left;
             margin-bottom: 2%;
             margin-left: 2%;
       }
-
 	  #login-form .submit {
 		width:50px;
 		height:15px;
@@ -63,73 +62,111 @@
 		color:black;
 	  }
             h1{
-                color:white;
+                margin-left:100px;
+				text-align: center;
+				color: white;
+            }
+			h2 {
+				text-align: center;
+				color: white;
+				}
+			h3{
+				text-align: center;
+				color: white;
+				}
+			p {
+			margin-left: 400px;
+			text-align: center;
+			color: white;
+			width: 500px;
+			height: 60px;
+			}
+			li{
+			margin-left: 300px;
+			text-align: left;
+			color: white;
+			}
+			div.row1{
+				display: inline-block;
+				}
+			div.row2{
+				display: inline-block;
+				}
+			div.row3{
+				display: inline-block;
+				}
+			div.quick{
+				display: inline-block;
+				}
+			div.row4{
+				display: inline-block;
+				}
+			#pic_1{
+			margin-left: 320px;
+			border-radius:20px
+			position:absolute;
+			left:50px;
+			border: 10px solid pink;
+            }
+            #pic_2{
+			text-align: center;
+			margin-left: 320px;
+			margin-top: 0px;
+			border-radius:20px
+			position:absolute;
+			left:50px;
+			border: 10px solid pink;
+            }
+            #pic_3{
+			text-align: center;
+            margin-top: 0px;
+			margin-left: 320px;
+			border-radius:20px
+			position:absolute;
+			left:50px;
+			border: 10px solid pink;
+            }
+			#pic_4{
+			margin-top: 15px;
+            margin-left:680px;
+			position:absolute;
+			left:50px;
+			border: 10px solid pink;
+            }
+			#pic_5{
+			margin-top: 15px;
+            margin-left:320px;
+			position:absolute;
+			left:50px;
+			border: 10px solid pink;
+			}
+			
+            #video_1{
+				margin-left: 180px;
+                text-align: center;
+                max-width: 1000px;
+            }
+            #quickfacts{
+				color: white;
+				margin-left: 15px;
+				margin-top:-50px;
+				width: 200px;
+            }
+            body {
+                padding: 10px;
 				background-color: black;
-                margin-top: 50px;
-                margin-left: auto;
-                margin-right: auto;
-                padding-left: 50px;
-                padding-right: -50px;
-                max-width: 440px;
-                border: 5px white double;
-                border-radius: 10px;
+				background-image: url("https://s32.postimg.org/xe2r0amc5/homepagebackground.png");
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				font-family: Fjalla One;
             }
-            body{
-                color: white;
-                font-family: Fjalla One;
-				background-image: url(https://s-media-cache-ak0.pinimg.com/564x/30/ce/a7/30cea7b5cb866f9379f37fb8acd5ac99.jpg);
-            }
-            .definition{
-				margin-top:10px;
-                padding: 50px;  
-				margin-right: 300px;
-                padding-left: 100px;
-                padding-right: 400px;
-                max-width: 1000px;
-                background-color: darkgray;
-            }
-            #theline{
-                padding: 60px;
-                text-align: right;
-                background-color: black;
-				margin-right: 300px;
-            }
-            #victims {
-                padding: 50px;  
-                padding-left: 50px;
-                margin-right: 300px;
-                max-width: 1000px;
-                background-color: darkgray;
-            }
-            .censorship {
-                padding-left: 400px;
-                padding: 60px;
-                text-align: right;
-                background-color: black;
-				margin-right:300px
-                
-            }
-            #facts {
-                padding: 50px;  
-                padding-left: 50px;
-                padding-right: 50px;
-                max-width: 175px;
-				color:black;
-				margin-right: 10px;
-                background-color: white;
-                margin-top: 50px;
-				height: 600px;
-				float:right;
-            }
-            #wholenav {
+       #wholenav {
 			margin-right: 10px;
 			width: 200px;
-			background-color: #f1f1f1;
 			height: 600px;
-			border: 3px groove #555;
             position:absolute;
 			right:10;
-			top:0px;
+			top:20px;
 			z-index: 2;
 		}
 		#wholenav li {
@@ -201,9 +238,9 @@
     #bottomnav li:last-child {
 			border-right: none;
 		}
-        </style>
-        <script>
-            function infoImg(pic,source) {
+	</style>
+    <script>
+		function infoImg(pic,source) {
                 var infopic= document.getElementById(pic);
                 infopic.style.height = "500px";
                 infopic.src = source;
@@ -214,130 +251,123 @@
                 icon.style.height = "300px";
                 icon.src = source;
             }
-        </script>
-    </head>
-    <body>
-    <a style="float:left; margin-left:0px; margin-top:-40px" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/homepage.html"><img id="logo" src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="170px"/></a>
+	</script>   
+	</head>
+<body>
+    <a style="position:absolute; float:left; margin-left:-10px; margin-top:-10px; text-align:center" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/homepage.html"><img id="logo" src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="175" width="200"/></a>
     
-        <h1>Sexual Assault... It's Real</h1>
-        <br/>
-        <br/>
-        <br/>
-    <div class= "definition">
-        <h2> What is it? </h2>
-        <p>Sexual assault is a crime of power and control. The term "sexual assault" refers to sexual contact or behavior that occurs without explicit consent of the victim. Some forms of sexual assault include:
-
-            <li>Penetration of the victim’s body, also known as rape</li>
-            <li>Attempted rape</li>
-            <li>Forcing a victim to perform sexual acts, such as oral sex or penetrating the perpetrator’s body</li>
-            <li>Fondling or unwanted sexual touching</li></p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/dT1_yP0w3jk" frameborder="0" allowfullscreen></iframe>
+    
+    <div class = "infographics">
+        <h1><u>Sexual Assault... It's Real</u></h1>
+			<h2>What is it?</h2>
+			  <p>Sexual assault is a crime of power and control. The term "sexual assault" refers to sexual contact or behavior that occurs without explicit consent of the victim. Some forms of sexual assault include
+			  <li>Penetration of the victim’s body, also known as rape</li>
+			  <li>Attempted rape</li>
+              <li>Forcing a victim to perform sexual acts, such as oral sex or penetrating the perpetrator’s body</li>
+              <li>Fondling or unwanted sexual touching</li>
+			  </p>
+		 <div id="quickfacts" class="quick">
+            <h2><u>Quick facts</u></h2>
             <br/>
-            <br/>
-        </div>
-    <div class= "container">
-		<div id= "facts">
-        <h2> Quick Facts </h2>
-        <marquee loop= INFINITE behavior="scroll" direction="up" scrollamount="3" style="height:500px; font-size:24px">"Every 2 minutes an American is sexually assaulted." 
-			<br/>
+            <marquee loop= INFINITE behavior="scroll" direction="up" scrollamount="3.5" style="height:150px; width:200px; font-size:24px">"Every 2 minutes an American is sexually assaulted." 
 			<br/>
 			<br/>
 			"35.8% of sexual assaults occur when the victim is between the ages of 12 and 17."
 			<br/>
 			<br/>
-			<br/>
 			"Less than 10% of sexual assaults are reported to the police."
-			<br/>
 			<br/>
 			<br/>
 			"97% of rapists will never spend a single day in jail."
             <br/>
             <br/>
-            <br/>
             "Marital rape is one of the most common type of sexual violence across Asia."
-            <br/>
             <br/>
             <br/>
             "Women are not the only people raped, although their statics are high. Men are also sexual abused."
 			</marquee>
             <br/>
             <br/>
-         <a href ="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/quiz_facts.html" >Test your knowledge now with our quiz.</a>
-    </div>
-		<div id = "theline">
-			<h2>Drawing the line.</h2>
-			<h3> Well, what is consent? </h3>
-			<p>This video makes consent as easy as 1, 2, 3.</p>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/pZwvrxVavnQ" frameborder="0" allowfullscreen></iframe>
-		</div>
-		
-		<div id= "victims">
-			<h2>Who is targeted?</h2>
-			<p> Roll over the image below to find out.</p>
-			<img id = icon_1 onmouseover="infoImg('icon_1','https://www.rainn.org/sites/default/files/Number_of_People_Victimized_In_One_Year%2006316.svg')" onmouseout= "iconImg('icon_1','https://thumbs.dreamstime.com/z/throwing-target-sign-15493267.jpg')" src="https://thumbs.dreamstime.com/z/throwing-target-sign-15493267.jpg" height= "300px">
-        <br/>
-    	</div>
-	</div>
-    <div class= "censorship">
-        <h2>Our Abstinence Culture</h2>
-        <h3>It starts with our Sex Education</h3>
-        <p> The government provides a large amount of funding for abstinence-only education programs, even though they are not effective at delaying the initiation of sexual activity or in reducing teen pregnancy. This teaches children and teens, that sex is a bad thing, an embaarassment. And when they do it, they are tainted with something bad. </p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/L0jQz6jqQS0" frameborder="0" allowfullscreen></iframe>
-        <br/>
-        <h3> "Rape barely happens." Look at the hidden reality below</h3>
-        <img id = icon_2 onmouseover="infoImg('icon_2','http://www.themaneater.com/media/2013/1023/graphics/sexualassault010_jpg_775x525_q85.jpg')" onmouseout= "iconImg('icon_2','http://images.huffingtonpost.com/2015-06-22-1434996537-2661880-ThinkstockPhotos186213710-thumb.jpg')" src="http://images.huffingtonpost.com/2015-06-22-1434996537-2661880-ThinkstockPhotos186213710-thumb.jpg" maxheight= "300px">
-        <br/>
-        <h2> We live in a country that values silence instead of speaking out. </h2>
-        <p>The documentary below summarizes how the world takes rape culture as a fantasy and often blames the victim for wearing something "revealing" or being at a place at the wrong time.</p>
-        <br/>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/iJ-uoroILu4" frameborder="0" allowfullscreen></iframe>
         </div>
-  
-<div id="wholenav">
-		<ul>
-		<li>
-			<a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/homepage.html"><span style="margin-left:-50px"> Welcome, baymax </span> <br><br> Log Out </a></li>
+		<div id="video_1" class="quick">
+            <iframe width="500" height="350" src="https://www.youtube.com/embed/dT1_yP0w3jk" frameborder="0" allowfullscreen></iframe>
+			<br/>
+			<br/>
+        </div>
+			<h3><u>What is consent?</u></h3>
+        <div id= "pic_1" class="row1">
+           <iframe height="300" width="700" src="https://www.youtube.com/embed/pZwvrxVavnQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+		<h2>Who is targeted?</h2>
+		<div id = "pic_2" class= "row1" >
+             <img id = icon_1 onmouseover="infoImg('icon_1','https://www.rainn.org/sites/default/files/Number_of_People_Victimized_In_One_Year%2006316.svg')" onmouseout= "iconImg('icon_1','https://thumbs.dreamstime.com/z/throwing-target-sign-15493267.jpg')" src="https://thumbs.dreamstime.com/z/throwing-target-sign-15493267.jpg" height= "350" width="700">
+		</div>
+		<h3> "Rape barely happens"...Little did you know.</h3>
+		<div id="pic_3" class="row2">
+           <iframe height="350" width="350" src="https://www.youtube.com/embed/L0jQz6jqQS0" frameborder="0" allowfullscreen></iframe>
+        </div>
+		<div id="pic_4" class="row3">
+			<img id = icon_2 onmouseover="infoImg('icon_2','http://www.themaneater.com/media/2013/1023/graphics/sexualassault010_jpg_775x525_q85.jpg')" onmouseout= "iconImg('icon_2','http://images.huffingtonpost.com/2015-06-22-1434996537-2661880-ThinkstockPhotos186213710-thumb.jpg')" src="http://images.huffingtonpost.com/2015-06-22-1434996537-2661880-ThinkstockPhotos186213710-thumb.jpg" height="300" width="350">
+		</div>
+		<h2> We live in a country that values silence instead of speaking out. </h2>
+		<div id="pic_5" class="row4">
+		 <iframe height="350" width="700" src="https://www.youtube.com/embed/iJ-uoroILu4" frameborder="0" allowfullscreen></iframe>
+	   </div>
+    </div>
+    
+    
+	<div id="wholenav">
+    <ul>
+		<li id="login"><a  href="#" margin-right="40px">Log In/<br>Sign Up</a>
+                <form id="login-form" action="" method="post">
+                    <p style="width:300px; margin-top:15px; margin-left:5px;"><input class="text" id="username" type="text" name="username" placeholder="username" /></p>
+                    <p style="width:300px; margin-left:5px"><input class="text" id="password" type="password" name="password" placeholder="password" /></p><br><br>
+                    <button> <a type="button" class="submit" id="submit"> Log In </button> </a>
+					<a class="signup" style="padding:3px; font-size:13px; width:140px; height:7px; margin-top:-14px; margin-left:15px; background-color:#666" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/sign_up.html">Don't have an account yet? Click here to sign up.</a>
+					<p style="margin-top:25px; font-size:12px;" id="error"></p>
+				</form>
+					
+                </li>
+        <li><a>Quiz</a>
+			<ul>
+				<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/quiz_facts.html">Facts</a></li>
+				<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/quiz_scenarios.html">Scenarios</a></li>
+			</ul>
 		</li>
-		 <li><a>Quiz</a>
-		<ul>
-		  <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_quiz_facts.html">Facts</a></li>
-		  <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_quiz_scenarios.html">Scenarios</a></li>
-		</ul>
-		</li>
-			<li><a>Infographics/</br>Statistics</a>
-				<ul>
-					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_info_general.html">General</a></li>
-					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_info_colleges.html">Colleges</a></li>
-				</ul>
-			</li>
-			<li><a>Stories</a>
-				<ul>
-					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_stories_all.html">All</a></li>
-					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_stories_specificcollege.html">Your </br> College</a></li>
-				</ul>
-			</li>
-			<li><a href="#news">News</a>
-				<ul>
-					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_news_global.html">Global</a></li>
-					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_news_US.html">US</a></li>
-					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_news_colleges.html">Colleges</a></li>
-				</ul>
-			</li>
-			<li><a>Forums</a>
-				<ul>
-					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_forums_all.html">All</a></li>
-					<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_forums_specificcollege.html">Your </br> College</a></li>
-				</ul>
-			</li>
-        <li><a>Support</a>
+		<li><a>Infographics/</br>Statistics</a>
             <ul>
-                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_petition.html">Petition</a></li>
-                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_staysafe.html">What You <br> Can Do</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/info_general.html">General</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/info_colleges.html">Colleges</a></li>
             </ul>
         </li>
-			<li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_aboutus.html">About Us</a></li>
-		</ul>
-	</div>
+        <li><a>Stories</a>
+            <ul>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/stories_all.html">All</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/stories_specificcollege.html">Specific </br> College</a></li>
+            </ul>
+        </li>
+        <li><a href="#news">News</a>
+            <ul>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/news_global.html">Global</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/news_US.html">US</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/news_colleges.html">Colleges</a></li>
+            </ul>
+        </li>
+        <li><a>Forums</a>
+            <ul>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/forums_all.html">All</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/forums_specificcollege.html">Specific </br> College</a></li>
+            </ul>
+        </li>
+        <li><a>Support</a>
+            <ul>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/petition.html">Petition</a></li>
+                <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/staysafe.html">What You <br> Can Do</a></li>
+            </ul>
+        </li>
+        <li><a href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/aboutus.html">About Us</a></li>
+    </ul>
+</div>
 <div id="bottomnav">
     <ul>
         <li><a target="_blank" href="https://www.rainn.org/about-national-sexual-assault-telephone-hotline">Hotline: 800.656.HOPE (4673)</a></li>
