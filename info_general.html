@@ -48,6 +48,19 @@
             width:178px;
             height:140px;
       }
+      		#login-form  {
+            margin-left: -175px;
+            position: absolute;
+            margin-top: -85px;
+            display: none;
+            float: left;
+            clear: both;
+            background-color: #666;
+            padding: 0 2% 2% 2%;
+            border-radius: 5px;
+            width:178px;
+            height:145px;
+      }
       #login-form .text {
             width: 50%;
             float: left;
@@ -75,13 +88,13 @@
 				color: white;
 				}
 			p {
-			margin-left: 400px;
+			margin-left: 350px;
 			text-align: center;
 			color: white;
-			width: 500px;
+			width: 700px;
 			height: 60px;
 			}
-			li{
+			.infographics li{
 			margin-left: 300px;
 			text-align: left;
 			color: white;
@@ -161,20 +174,20 @@
 				font-family: Fjalla One;
             }
        #wholenav {
-			margin-right: 10px;
+			margin-right: 0px;
 			width: 200px;
-			height: 600px;
-            position:absolute;
-			right:10;
-			top:20px;
+			background-color: transparent;
+			height: 550px;
+			position: absolute;
+			right:0;
+			top:0px;
 			z-index: 2;
 		}
 		#wholenav li {
-        		z-index: -1;
+			z-index: -1;
 			margin-right: 20px;
 			list-style: none;
-			border-bottom: 2px solid #555;
-			font-family: Fjalla One;
+			border-bottom: 2px solid white;
 		}
 		#wholenav li:last-child {
 			border-bottom: none;
@@ -185,9 +198,9 @@
 		}
 		#wholenav ul li a {
 			display: block;
-			color: #000;
-			font-size: 17px;
-			padding: 21px;
+			color: white;
+			font-size: 20px;
+			padding: 23px;
 			text-decoration: none;
 			text-align: center;
 		}
@@ -198,16 +211,16 @@
 		#wholenav ul ul {
 			z-index: 1;
 			visibility: hidden;
-			margin-left: -135px;
+			margin-left: -150px;
 			float:left;
-        margin-top: -70px;
+			margin-top: -70px;
 			height: 0;
 			color: white;
-        background-color: #555;
+			background-color: transparent;
 		}
 		#wholenav ul ul a {
 			color: white;
-        background-color: #555
+			background-color: #555
 		}
 		.active {
 			background-color: #4CAF50;
@@ -260,7 +273,8 @@
     <div class = "infographics">
         <h1><u>Sexual Assault... It's Real</u></h1>
 			<h2>What is it?</h2>
-			  <p>Sexual assault is a crime of power and control. The term "sexual assault" refers to sexual contact or behavior that occurs without explicit consent of the victim. Some forms of sexual assault include
+			  <p>Sexual assault is a crime of power and control. The term "sexual assault" refers to sexual contact or behavior that occurs without explicit consent of the victim. </p>
+              <p style="font-size:17px; margin-left:100px; margin-bottom:-30px">Some forms of sexual assault include: </p>
 			  <li>Penetration of the victim’s body, also known as rape</li>
 			  <li>Attempted rape</li>
               <li>Forcing a victim to perform sexual acts, such as oral sex or penetrating the perpetrator’s body</li>
@@ -290,13 +304,13 @@
             <br/>
         </div>
 		<div id="video_1" class="quick">
-            <iframe width="500" height="350" src="https://www.youtube.com/embed/dT1_yP0w3jk" frameborder="0" allowfullscreen></iframe>
+            <iframe width="500" height="350" src="https://www.youtube.com/embed/dT1_yP0w3jk" frameborder="0" allowfullscreen/></iframe>
 			<br/>
 			<br/>
         </div>
 			<h3><u>What is consent?</u></h3>
         <div id= "pic_1" class="row1">
-           <iframe height="300" width="700" src="https://www.youtube.com/embed/pZwvrxVavnQ" frameborder="0" allowfullscreen></iframe>
+           <iframe height="300" width="700" src="https://www.youtube.com/embed/pZwvrxVavnQ" frameborder="0" allowfullscreen/></iframe>
         </div>
 		<h2>Who is targeted?</h2>
 		<div id = "pic_2" class= "row1" >
@@ -323,7 +337,7 @@
                     <p style="width:300px; margin-top:15px; margin-left:5px;"><input class="text" id="username" type="text" name="username" placeholder="username" /></p>
                     <p style="width:300px; margin-left:5px"><input class="text" id="password" type="password" name="password" placeholder="password" /></p><br><br>
                     <button> <a type="button" class="submit" id="submit"> Log In </button> </a>
-					<a class="signup" style="padding:3px; font-size:13px; width:140px; height:7px; margin-top:-14px; margin-left:15px; background-color:#666" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/sign_up.html">Don't have an account yet? Click here to sign up.</a>
+					<a class="signup" style="color:white; padding:3px; font-size:13px; width:140px; height:7px; margin-top:-14px; margin-left:15px; background-color:#666" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/sign_up.html">Don't have an account yet? Click here to sign up.</a>
 					<p style="margin-top:25px; font-size:12px;" id="error"></p>
 				</form>
 					
