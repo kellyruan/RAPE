@@ -11,79 +11,20 @@
 		<script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			var correct = false;
-			document.getElementById("error").innerHTML = ""
-            $("#username").keyup(function(){
-                if (this.value == 'baymax') {
-                    document.getElementById("submit").href = "http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_homepage.html"; 
-					correct = true;
-					}
-                else if (this.value == 'ironman') {
-                    document.getElementById("submit").href = "http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/j_homepage.html"; 
-					correct = true;
-				}
-            });
-			$('#submit').click(function(){
-				if (correct = false) {	
-					document.getElementById("error").innerHTML = "Username or Password incorrect." 
-                }
-            });
-            $("#login").hover(function() {
-                $("#login-form").slideToggle();
-            });
             focus();
             var listener = addEventListener('blur', function() {
                 if(document.activeElement === document.getElementById('1')) {
-                    document.getElementById("caption1").style.visibility = "hidden"
-            }
+                    document.getElementById("caption1").style.visibility = "hidden";
+				}
             });
             removeEventListener(listener);
 		});
 	</script>
         <style>
-			#login-form  {
-            margin-left: -180px;
-            position: absolute;
-            margin-top: -85px;
-            display: none;
-            float: left;
-            clear: both;
-            background-color: #666;
-            padding: 0 2% 2% 2%;
-            border-radius: 5px;
-            width:178px;
-            height:140px;
-      }
-
-      		#login-form  {
-            margin-left: -175px;
-            position: absolute;
-            margin-top: -85px;
-            display: none;
-            float: left;
-            clear: both;
-            background-color: #666;
-            padding: 0 2% 2% 2%;
-            border-radius: 5px;
-            width:178px;
-            height:145px;
-      }
-      #login-form .text {
-            width: 50%;
-            float: left;
-            margin-bottom: 2%;
-            margin-left: 2%;
-      }
-	  #login-form .submit {
-		width:50px;
-		height:15px;
-		font-size:14px;
-		padding:0px;
-		color:black;
-	  }
+			
             body {
                 background-color: black;
- -                padding: 10px;
+                padding: 10px;
                 font-family: Fjalla One;
             }
             .news_stories {
@@ -196,13 +137,13 @@
     <body>
         
  <div class= "news_stories">
-            <a style="position:fixed; float:left; margin-top:-10px; margin-left:-650px" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/homepage.html"><img id="logo" src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="140px"/></a>
+            <a style="position:fixed; float:left; margin-top:-10px; margin-left:-650px" href="http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/k_homepage.html"><img id="logo" src="https://raw.githubusercontent.com/kellyruan/RAPE/master/logo.PNG" height="140px"/></a>
             <h1 style="margin-right:80px"><b> Sexual Assault at Scale</b></h1>
             <div id= "US">
                 <div class="container">
                     <h2 style="margin-right:100px"> <b>US Stories </b></h2>
                   <br>
-                  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                  <div id="myCarousel" class="carousel slide">
                     <!-- Indicators -->
                     <ol style="margin-left:-400px" class="carousel-indicators">
                       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
