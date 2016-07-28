@@ -1,9 +1,6 @@
 http://htmlpreview.github.io/?https://github.com/kellyruan/RAPE/master/homepage.html
-logins: username: baymax, ironman(not yet made)
+login: username:"baymax", password:anything
 
-sign up page
-shift login box to right
-news - pause carousel when playing video
 
 
 % -->  px, vice versa
@@ -11,4 +8,3 @@ external style sheet: logo, nav bars, bottom bar - minimizes when scroll down
 titles
 display message when username/password incorrect(need database)
 
-the dream team 5
